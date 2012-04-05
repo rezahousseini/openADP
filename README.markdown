@@ -1,3 +1,3 @@
-# Hello this is a markdown README
-
-`Here is some code`
+# README for project openADP
+## Intention
+## License
