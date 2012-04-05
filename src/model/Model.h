@@ -13,9 +13,12 @@
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/vector.hpp>
 #include <lemon/list_graph.h>
+#include <lemon/graph_to_eps.h>
 
 using namespace boost::numeric::ublas;
 using namespace lemon;
+
+typedef dim2::Point<int> Point;
 
 class Model {
 public:
@@ -28,7 +31,5 @@ public:
 	const matrix<Connection> &connections;
 	ListDigraph *graph;
 };
-
-//ListDigraph Model::graph;
 
 #endif /* MODEL_H_ */

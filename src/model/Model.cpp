@@ -6,7 +6,6 @@
  */
 
 #include "Model.h"
-#include <lemon/graph_to_eps.h>
 
 using namespace lemon;
 
@@ -93,8 +92,7 @@ Model::Model(const vector<Resource> &_resources, const matrix<Connection> &_conn
 		parArcDist(1).
 		drawArrows().
 		nodeScale(0.03).
-		nodeTexts(name).
-		run();
+		nodeTexts(name);
 }
 
 Model::~Model() {

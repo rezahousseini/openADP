@@ -11,7 +11,7 @@
 #include "../abstract/Solver.h"
 #include "../abstract/Resource.h"
 #include "../abstract/Connection.h"
-#include "../abstract/Parameter.h"
+#include "../parameter/SolverParameter.h"
 #include "../model/Model.h"
 #include "../optimizer/PLOptimizer.h"
 #include "../simulator/UniSimulator.h"
@@ -25,7 +25,8 @@ using namespace boost::numeric::ublas;
 
 class SimpleSolver: public Solver {
 public:
-	SimpleSolver(const vector<Resource> &_resources, const matrix<Connection> &_connections, const Parameter &_params);
+	SimpleSolver(const vector<Resource> &_resources,
+			const matrix<Connection> &_connections, const SolverParameter &_params);
 	int solve();
 
 protected:

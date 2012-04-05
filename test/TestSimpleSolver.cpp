@@ -15,7 +15,8 @@ TestSimpleSolver::TestSimpleSolver() {
 }
 
 int TestSimpleSolver::test() {
-	Parameter params;
+	SolverParameter params;
+//	params.setParams({10, 20});
 	vector<Resource> resources(4);
 	matrix<Connection> connections(4, 4);
 

@@ -8,8 +8,10 @@
 #include "PLValueFunction.h"
 
 PLValueFunction::PLValueFunction() {
-	// TODO Auto-generated constructor stub
+}
 
+PLValueFunction::PLValueFunction(int numbers) {
+	weights = vector<ListDigraph::Arc> (numbers);
 }
 
 void PLValueFunction::update() {
