@@ -8,15 +8,16 @@
 #ifndef VALUEFUNCTION_H_
 #define VALUEFUNCTION_H_
 
-#include <lemon/list_graph.h>
-#include <lemon/maps.h>
+//#include <lemon/list_graph.h>
+//#include <lemon/maps.h>
 
-using namespace lemon;
+//using namespace lemon;
 
 class ValueFunction {
 public:
 	ValueFunction();
-	ValueFunction(ListDigraph &graph, ListDigraph::Node &node, int numberFeatures);
+	ValueFunction(int numberFeatures);
+	//ValueFunction(ListDigraph &graph, ListDigraph::Node &node, int numberFeatures);
 	virtual ~ValueFunction();
 
 //	ListDigraph::ArcMap<float> approxCostMap;

@@ -13,6 +13,7 @@ class BAKFStepsize : public Stepsize {
 		float lambda;
 		float eta;
 		float sigma;
+		float a;
 };
 
 #endif /* BAKFSTEPSIZE_H_ */

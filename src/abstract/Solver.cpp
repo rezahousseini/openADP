@@ -6,11 +6,6 @@
  */
 
 #include "Solver.h"
-#include "Status.h"
-
-//Solver::Solver(const Parameter &params) {
-//
-//}
 
 int Solver::getStatus() {
 
@@ -23,7 +18,7 @@ int Solver::getStatus() {
 
 }
 
-const Parameter & Solver::getParams() {
+const GeneralParameter & Solver::getParams() {
 	return params;
 }
 

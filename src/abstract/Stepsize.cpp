@@ -1,6 +1,6 @@
 #include "Stepsize.h"
 
-Stepsize::Stepsize(float _alpha0) : alpha(_alpha0), alpha0(_alpha0) {
+Stepsize::Stepsize(const Parameter &_params) : alpha(1), params(_params) {
 	iteration = 0;
 }
 

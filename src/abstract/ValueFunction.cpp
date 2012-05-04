@@ -11,7 +11,9 @@ ValueFunction::ValueFunction() {
 
 }
 
-ValueFunction::ValueFunction(ListDigraph &graph, ListDigraph::Node &node, int numberFeatures) {
+ValueFunction::ValueFunction(int numberFeatures) {
+
+//ValueFunction::ValueFunction(ListDigraph &graph, ListDigraph::Node &node, int numberFeatures) {
 //	approxCostMap(graph);
 //
 //	ListDigraph::Node emptyNode = graph.addNode();

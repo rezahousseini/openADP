@@ -8,23 +8,26 @@
 #ifndef SOLVER_H_
 #define SOLVER_H_
 
-#include "Parameter.h"
-
-class Status;
+#include "GeneralParameter.h"
+#include "Stepsize.h"
+#include "Status.h"
 
 class Solver {
 public:
-	Solver(const Parameter &_params) : params(_params) {};
+	Solver(const GeneralParameter &_params, const Stepsize &_stepsize) : 
+		params(_params), stepsize(_stepsize) {init();};
 
 	virtual int solve() = 0;
 	virtual int getStatus();
-	virtual const Parameter & getParams();
+	virtual const GeneralParameter & getParams();
 	virtual ~Solver();
 
 protected:
+	virtual void init(void) {};
 	int iter;
 	Status *status;
-	const Parameter &params;
+	Stepsize stepsize;
+	const GeneralParameter &params;
 };
 
 #endif /* SOLVER_H_ */

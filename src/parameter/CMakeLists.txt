@@ -1,1 +1,1 @@
-add_library(parameter SolverParameter.cpp)
+add_library(parameter SimpleParameter.cpp GeneralParameter.cpp STCStepsizeParameter.cpp)

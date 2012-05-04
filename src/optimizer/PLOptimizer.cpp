@@ -7,26 +7,26 @@
 
 #include "PLOptimizer.h"
 #include <boost/numeric/ublas/matrix_proxy.hpp>
-#include <lemon/list_graph.h>
+//#include <lemon/list_graph.h>
 
-using namespace lemon;
+//using namespace lemon;
 
-PLOptimizer::PLOptimizer(Model &_model, const SolverParameter &_params) : Optimizer(),
+PLOptimizer::PLOptimizer(Model &_model, const SimpleParameter &_params) : Optimizer(),
 		params(_params), model(_model), valfunc() {
 
-	vector<ListDigraph::Node> futurNodes = matrix_column<matrix<ListDigraph::Node> > (model.nodeMap, 2);
-	valfunc = vector<PLValueFunction> (model.resources.size());
+	//vector<ListDigraph::Node> futurNodes = matrix_column<matrix<ListDigraph::Node> > (model.nodeMap, 2);
+	//valfunc = vector<PLValueFunction> (model.resources.size());
 
-	// Adding arcs for the piecewise linear value function
-	for (unsigned i=0; i<futurNodes.size(); i++) {
-		if (model.resources(i).maxCapacity > 0) {
-			// Add an arc for every discretization step rho
-			valfunc(i) = PLValueFunction(params.rho*model.resources(i).maxCapacity);
-			for (int k=0; k<params.rho; k++) {
-				valfunc(i).weights(k) = model.graph->addArc(futurNodes(i), model.sink);
-			}
-		}
-	}
+	//// Adding arcs for the piecewise linear value function
+	//for (unsigned i=0; i<futurNodes.size(); i++) {
+		//if (model.resources(i).maxCapacity > 0) {
+			//// Add an arc for every discretization step rho
+			//valfunc(i) = PLValueFunction(params.rho*model.resources(i).maxCapacity);
+			//for (int k=0; k<params.rho; k++) {
+				//valfunc(i).weights(k) = model.graph->addArc(futurNodes(i), model.sink);
+			//}
+		//}
+	//}
 }
 
 void PLOptimizer::run() {

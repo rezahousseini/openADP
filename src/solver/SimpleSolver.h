@@ -8,28 +8,30 @@
 #ifndef SIMPLESOLVER_H_
 #define SIMPLESOLVER_H_
 
-#include "../abstract/Solver.h"
-#include "../abstract/Resource.h"
-#include "../abstract/Connection.h"
-#include "../parameter/SolverParameter.h"
-#include "../model/Model.h"
-#include "../optimizer/PLOptimizer.h"
-#include "../simulator/UniSimulator.h"
+#include "Solver.h"
+#include "Resource.h"
+#include "Connection.h"
+#include "SimpleParameter.h"
+#include "Model.h"
+#include "PLOptimizer.h"
+#include "UniSimulator.h"
+
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/vector.hpp>
-#include <lemon/maps.h>
-#include <lemon/list_graph.h>
+//#include <lemon/maps.h>
+//#include <lemon/list_graph.h>
 
-using namespace lemon;
+//using namespace lemon;
 using namespace boost::numeric::ublas;
 
 class SimpleSolver: public Solver {
 public:
 	SimpleSolver(const vector<Resource> &_resources,
-			const matrix<Connection> &_connections, const SolverParameter &_params);
+			const matrix<Connection> &_connections, const SimpleParameter &_params);
 	int solve();
 
 protected:
+	void init(void);
 	Model model;
 	PLOptimizer optimizer;
 	UniSimulator simulator;

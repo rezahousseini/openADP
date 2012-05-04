@@ -2,7 +2,7 @@
 #include <math.h>
 
 BAKFStepsize::BAKFStepsize(float alpha0, float beta0, float nu0, float lambda0, float _a) : 
- Stepsize(alpha0), beta0(beta0), nu0(nu0), lambda(lambda0), eta(alpha0), a(_a) {
+ Stepsize(alpha0), beta(beta0), nu(nu0), lambda(lambda0), eta(alpha0), a(_a) {
 }
 
 void BAKFStepsize::update(float epsilon) {

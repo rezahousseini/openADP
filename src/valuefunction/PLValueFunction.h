@@ -10,9 +10,9 @@
 
 #include "../abstract/ValueFunction.h"
 #include <boost/numeric/ublas/matrix.hpp>
-#include <lemon/list_graph.h>
+//#include <lemon/list_graph.h>
 
-using namespace lemon;
+//using namespace lemon;
 using namespace boost::numeric::ublas;
 
 class PLValueFunction : ValueFunction {
@@ -21,7 +21,7 @@ public:
 	PLValueFunction(int numbers);
 	virtual ~PLValueFunction();
 	void update();
-	vector<ListDigraph::Arc> weights; // weights for the arcs
+	//vector<ListDigraph::Arc> weights; // weights for the arcs
 };
 
 #endif /* PLVALUEFUNCTION_H_ */

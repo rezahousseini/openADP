@@ -1,10 +1,12 @@
 #include "STCStepsize.h"
 #include <math.h>
 
-STCStepsize::STCStepsize(float alpha0, float _beta, float _a, float _b) : Stepsize(alpha0), beta(_beta), a(_a), b(_b) {
+STCStepsize::STCStepsize(const STCStepsizeParameter &_params) : 
+ Stepsize(_params), params(_params) {
+	 alpha = params.alpha0;
 }
 
 void STCStepsize::update(void) {
 	iteration = iteration+1;
-	alpha = alpha0*(b/iteration+a)/(b/iteration+a+pow(iteration, beta));
+	alpha = params.alpha0*(params.b/iteration+params.a)/(params.b/iteration+params.a+pow(iteration, params.beta));
 }

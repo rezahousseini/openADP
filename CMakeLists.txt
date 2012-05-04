@@ -20,5 +20,5 @@ include_directories(
 
 add_subdirectory(src)
 
-add_executable(openADP openadp.cpp)
-target_link_libraries(openADP src abstract interface model optimizer parameter simulator solver stepsize utilities valuefunction octave)
+add_executable(openadp openadp.cpp)
+target_link_libraries(openadp model optimizer parameter simulator solver stepsize valuefunction octave abstract)

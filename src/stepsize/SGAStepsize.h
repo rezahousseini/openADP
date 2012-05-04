@@ -11,6 +11,7 @@ class SGAStepsize : public Stepsize {
 		float beta;
 		float a;
 		float b;
+		float c;
 };
 
 #endif /* SGASTEPSIZE_H_ */

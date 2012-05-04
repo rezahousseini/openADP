@@ -11,7 +11,7 @@ PLValueFunction::PLValueFunction() {
 }
 
 PLValueFunction::PLValueFunction(int numbers) {
-	weights = vector<ListDigraph::Arc> (numbers);
+	//weights = vector<ListDigraph::Arc> (numbers);
 }
 
 void PLValueFunction::update() {
