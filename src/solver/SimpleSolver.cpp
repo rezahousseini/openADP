@@ -5,12 +5,12 @@
  *      Author: reza
  */
 
-#include <boost/lexical_cast.hpp>
-//#include <lemon/graph_to_eps.h>
+//#include <boost/lexical_cast.hpp>
 #include "SimpleSolver.h"
 #include "Status.h"
 #include "ValueFunction.h"
 #include "STCStepsize.h"
+#include "State.h"
 
 SimpleSolver::SimpleSolver(const vector<Resource> &_resources,
  const matrix<Connection> &_connections,
@@ -21,7 +21,8 @@ SimpleSolver::SimpleSolver(const vector<Resource> &_resources,
 	simulator(model) {}
 
 void SimpleSolver::init(void) {
-	
+	vector<State> states;
+	//params.horizon = 
 }
 
 int SimpleSolver::solve(void) {
@@ -29,5 +30,4 @@ int SimpleSolver::solve(void) {
 	for (int i=0; i<params.iterate; i++) {
 		
 	}
-
 }

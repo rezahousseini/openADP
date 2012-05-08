@@ -1,13 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <math.h>
 
 #include "SimpleSolver.h"
+#include "ReadData.h"
 
-int main (int argc, char *argv[]) {
-	
+int main(int argc, char *argv[]) {
 	SimpleParameter params;
 	params.general.iterate = 200;
+
+	ReadData data = ReadData(argv[1]);
 	
 	vector<Resource> resources(4);
 	matrix<Connection> connections(4, 4);
@@ -38,8 +40,6 @@ int main (int argc, char *argv[]) {
 	connections(3, 3) = Connection(0, 0);
 
 	SimpleSolver solver = SimpleSolver(resources, connections, params);
-	
-	std::cout << "simple solver" << std::endl;
 	
 	return 0;
 }

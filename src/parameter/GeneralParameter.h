@@ -16,6 +16,7 @@ public:
 	GeneralParameter();
 	virtual ~GeneralParameter();
 	int iterate;
+	int horizon;
 	int scale;
 };
 

@@ -9,7 +9,7 @@
 #define OPTIMIZER_H_
 
 #include "ValueFunction.h"
-#include "../model/Model.h"
+#include "Model.h"
 
 class Optimizer {
 public:

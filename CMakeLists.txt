@@ -7,8 +7,9 @@ set(openADP_VERSION_MINOR 0)
 
 include_directories(
 "${PROJECT_SOURCE_DIR}/src/abstract"
+"${PROJECT_SOURCE_DIR}/src/interface"
 "${PROJECT_SOURCE_DIR}/src/interface/octave"
-"${PROJECT_SOURCE_DIR}/src/model"
+"${PROJECT_SOURCE_DIR}/src/core"
 "${PROJECT_SOURCE_DIR}/src/optimizer"
 "${PROJECT_SOURCE_DIR}/src/parameter"
 "${PROJECT_SOURCE_DIR}/src/simulator"
@@ -21,4 +22,4 @@ include_directories(
 add_subdirectory(src)
 
 add_executable(openadp openadp.cpp)
-target_link_libraries(openadp model optimizer parameter simulator solver stepsize valuefunction octave abstract)
+target_link_libraries(openadp core optimizer parameter simulator solver stepsize valuefunction octave abstract interface)

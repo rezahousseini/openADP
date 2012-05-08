@@ -8,8 +8,8 @@
 #ifndef UNISIMULATOR_H_
 #define UNISIMULATOR_H_
 
-#include "../abstract/Simulator.h"
-#include "../model/Model.h"
+#include "Simulator.h"
+#include "Model.h"
 
 class UniSimulator : public Simulator {
 public:

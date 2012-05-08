@@ -1,6 +1,6 @@
 add_subdirectory(abstract)
 add_subdirectory(interface)
-add_subdirectory(model)
+add_subdirectory(core)
 add_subdirectory(optimizer)
 add_subdirectory(parameter)
 add_subdirectory(simulator)

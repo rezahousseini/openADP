@@ -8,6 +8,11 @@
 #ifndef SIMPLESOLVER_H_
 #define SIMPLESOLVER_H_
 
+#include <boost/numeric/ublas/matrix.hpp>
+#include <boost/numeric/ublas/vector.hpp>
+//#include <lemon/maps.h>
+//#include <lemon/list_graph.h>
+
 #include "Solver.h"
 #include "Resource.h"
 #include "Connection.h"
@@ -15,11 +20,6 @@
 #include "Model.h"
 #include "PLOptimizer.h"
 #include "UniSimulator.h"
-
-#include <boost/numeric/ublas/matrix.hpp>
-#include <boost/numeric/ublas/vector.hpp>
-//#include <lemon/maps.h>
-//#include <lemon/list_graph.h>
 
 //using namespace lemon;
 using namespace boost::numeric::ublas;
