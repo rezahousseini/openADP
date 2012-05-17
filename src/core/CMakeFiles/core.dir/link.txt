@@ -1,0 +1,2 @@
+/usr/bin/ar cr libcore.a  CMakeFiles/core.dir/Connection.cpp.o CMakeFiles/core.dir/Model.cpp.o CMakeFiles/core.dir/Resource.cpp.o CMakeFiles/core.dir/State.cpp.o
+/usr/bin/ranlib libcore.a

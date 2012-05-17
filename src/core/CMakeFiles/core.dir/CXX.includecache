@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/reza/workspace/openADP/src/core/Connection.cpp
+Connection.h
+/home/reza/workspace/openADP/src/core/Connection.h
+
+/home/reza/workspace/openADP/src/core/Connection.h
+
+/home/reza/workspace/openADP/src/core/Model.cpp
+Model.h
+/home/reza/workspace/openADP/src/core/Model.h
+
+/home/reza/workspace/openADP/src/core/Model.h
+boost/numeric/ublas/matrix.hpp
+-
+boost/numeric/ublas/vector.hpp
+-
+Resource.h
+/home/reza/workspace/openADP/src/core/Resource.h
+Connection.h
+/home/reza/workspace/openADP/src/core/Connection.h
+
+/home/reza/workspace/openADP/src/core/Resource.cpp
+Resource.h
+/home/reza/workspace/openADP/src/core/Resource.h
+
+/home/reza/workspace/openADP/src/core/Resource.h
+Data.h
+/home/reza/workspace/openADP/src/core/Data.h
+
+/home/reza/workspace/openADP/src/core/State.cpp
+State.h
+/home/reza/workspace/openADP/src/core/State.h
+
+/home/reza/workspace/openADP/src/core/State.h
+
+src/abstract/Data.h
+
