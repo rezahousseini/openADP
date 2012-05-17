@@ -17,9 +17,10 @@ include_directories(
 "${PROJECT_SOURCE_DIR}/src/stepsize"
 "${PROJECT_SOURCE_DIR}/src/utilities"
 "${PROJECT_SOURCE_DIR}/src/valuefunction"
+"${PROJECT_SOURCE_DIR}/src/exception"
 )
 
 add_subdirectory(src)
 
 add_executable(openadp openadp.cpp)
-target_link_libraries(openadp core optimizer parameter simulator solver stepsize valuefunction octave abstract interface)
+target_link_libraries(openadp core optimizer parameter simulator solver stepsize valuefunction octave abstract interface exception)

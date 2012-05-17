@@ -22,7 +22,7 @@ SimpleSolver::SimpleSolver(const vector<Resource> &_resources,
 
 void SimpleSolver::init(void) {
 	vector<State> states;
-	//params.horizon = 
+	
 }
 
 int SimpleSolver::solve(void) {
