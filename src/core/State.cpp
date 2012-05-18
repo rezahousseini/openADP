@@ -8,6 +8,9 @@
 #include "State.h"
 
 State::State() {
+}
+
+State::State(Resource &_res, ValueFunction &_valfunc) : res(_res), valfunc(_valfunc) {
 	
 }
 

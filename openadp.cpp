@@ -4,13 +4,13 @@
 
 #include <string> // XXX need to be moved to SimpleSolver.h
 #include "SimpleSolver.h"
-#include "ReadData.h"
+#include "ProblemInstance.h"
 
 int main(int argc, char *argv[]) {
 	SimpleParameter params;
 	params.general.iterate = 200;
 
-	ReadData data = ReadData(argv[1]);
+	ProblemInstance prob = ProblemInstance(argv[1]);
 	
 	vector<vector<std::string> > resourceAttributes;
 	vector<vector<std::string> > decisionAttributes; 
@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
 	//connections(3, 2) = Connection(10, 1);
 	//connections(3, 3) = Connection(0, 0);
 
-	SimpleSolver solver = SimpleSolver(resources, connections, params);
+	SimpleSolver solver = SimpleSolver(prob, params);
 	
 	return 0;
 }

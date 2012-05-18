@@ -23,4 +23,4 @@ include_directories(
 add_subdirectory(src)
 
 add_executable(openadp openadp.cpp)
-target_link_libraries(openadp core optimizer parameter simulator solver stepsize valuefunction octave abstract interface exception)
+target_link_libraries(openadp core optimizer parameter simulator solver stepsize valuefunction octave abstract exception)

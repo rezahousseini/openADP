@@ -10,10 +10,17 @@ src/core/CMakeFiles/core.dir/Model.cpp.o: src/core/Model.h
 src/core/CMakeFiles/core.dir/Model.cpp.o: src/core/Resource.h
 src/core/CMakeFiles/core.dir/Model.cpp.o: src/abstract/Data.h
 
+src/core/CMakeFiles/core.dir/ProblemInstance.cpp.o: src/core/ProblemInstance.cpp
+src/core/CMakeFiles/core.dir/ProblemInstance.cpp.o: src/core/ProblemInstance.h
+src/core/CMakeFiles/core.dir/ProblemInstance.cpp.o: src/exception/MyException.h
+
 src/core/CMakeFiles/core.dir/Resource.cpp.o: src/core/Resource.cpp
 src/core/CMakeFiles/core.dir/Resource.cpp.o: src/core/Resource.h
 src/core/CMakeFiles/core.dir/Resource.cpp.o: src/abstract/Data.h
 
+src/core/CMakeFiles/core.dir/State.cpp.o: src/core/Resource.h
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/State.cpp
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/State.h
+src/core/CMakeFiles/core.dir/State.cpp.o: src/abstract/Data.h
+src/core/CMakeFiles/core.dir/State.cpp.o: src/abstract/ValueFunction.h
 

@@ -14,27 +14,27 @@
 //#include <lemon/list_graph.h>
 
 #include "Solver.h"
+#include "ProblemInstance.h"
+#include "State.h"
 #include "Resource.h"
 #include "Connection.h"
 #include "SimpleParameter.h"
 #include "Model.h"
 #include "PLOptimizer.h"
 #include "UniSimulator.h"
+#include "PlValueFunction.h"
 
 //using namespace lemon;
 using namespace boost::numeric::ublas;
 
 class SimpleSolver: public Solver {
 public:
-	SimpleSolver(const vector<Resource> &_resources,
-			const matrix<Connection> &_connections, const SimpleParameter &_params);
-	int solve();
+	SimpleSolver(const ProblemInstance& _prob, const SimpleParameter& _params);
+	const int solve();
 
 protected:
-	void init(void);
-	Model model;
-	PLOptimizer optimizer;
-	UniSimulator simulator;
+	const ProblemInstance& prob;
+	vector<vector<State> > states;
 };
 
 #endif /* SIMPLESOLVER_H_ */

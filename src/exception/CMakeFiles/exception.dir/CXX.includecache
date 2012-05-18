@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/reza/workspace/openADP/src/exception/MyException.cpp
+/home/hous/workspace/openADP/src/exception/MyException.cpp
 MyException.h
-/home/reza/workspace/openADP/src/exception/MyException.h
+/home/hous/workspace/openADP/src/exception/MyException.h
 
-/home/reza/workspace/openADP/src/exception/MyException.h
+/home/hous/workspace/openADP/src/exception/MyException.h
 exception
 -
 string

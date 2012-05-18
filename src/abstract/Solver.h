@@ -17,7 +17,7 @@ public:
 	Solver(const GeneralParameter &_params, const Stepsize &_stepsize) : 
 		params(_params), stepsize(_stepsize) {init();};
 
-	virtual int solve() = 0;
+	virtual const int solve() = 0;
 	virtual int getStatus();
 	virtual const GeneralParameter & getParams();
 	virtual ~Solver();
