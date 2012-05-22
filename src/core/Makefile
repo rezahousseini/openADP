@@ -136,6 +136,30 @@ Connection.cpp.s:
 	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Connection.cpp.s
 .PHONY : Connection.cpp.s
 
+Decision.o: Decision.cpp.o
+.PHONY : Decision.o
+
+# target to build an object file
+Decision.cpp.o:
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Decision.cpp.o
+.PHONY : Decision.cpp.o
+
+Decision.i: Decision.cpp.i
+.PHONY : Decision.i
+
+# target to preprocess a source file
+Decision.cpp.i:
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Decision.cpp.i
+.PHONY : Decision.cpp.i
+
+Decision.s: Decision.cpp.s
+.PHONY : Decision.s
+
+# target to generate assembly for a file
+Decision.cpp.s:
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Decision.cpp.s
+.PHONY : Decision.cpp.s
+
 Model.o: Model.cpp.o
 .PHONY : Model.o
 
@@ -244,6 +268,9 @@ help:
 	@echo "... Connection.o"
 	@echo "... Connection.i"
 	@echo "... Connection.s"
+	@echo "... Decision.o"
+	@echo "... Decision.i"
+	@echo "... Decision.s"
 	@echo "... Model.o"
 	@echo "... Model.i"
 	@echo "... Model.s"

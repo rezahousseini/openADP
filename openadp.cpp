@@ -1,19 +1,28 @@
-//#include <stdio.h>
-//#include <stdlib.h>
-//#include <math.h>
-
 #include <string> // XXX need to be moved to SimpleSolver.h
+#include <boost/numeric/ublas/vector.hpp>
+
 #include "SimpleSolver.h"
 #include "ProblemInstance.h"
+
+using namespace boost::numeric::ublas;
 
 int main(int argc, char *argv[]) {
 	SimpleParameter params;
 	params.general.iterate = 200;
 
 	ProblemInstance prob = ProblemInstance(argv[1]);
+	vector<State> states(10);
+	
+	vector<Resource> resources;
+	vector<ValueFunction> valfuncs;
+	matrix<Decision> decisions;
+	
+	for (int i=0; i<10; i++) {
+		states(i) = State()
+	}
 	
 	vector<vector<std::string> > resourceAttributes;
-	vector<vector<std::string> > decisionAttributes; 
+	vector<vector<std::string> > decisionAttributes;
 	
 	vector<Resource> resources(4);
 	matrix<Connection> connections(4, 4);
@@ -43,7 +52,7 @@ int main(int argc, char *argv[]) {
 	//connections(3, 2) = Connection(10, 1);
 	//connections(3, 3) = Connection(0, 0);
 
-	SimpleSolver solver = SimpleSolver(prob, params);
+	SimpleSolver solver = SimpleSolver(states, params);
 	
 	return 0;
 }

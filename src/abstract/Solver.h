@@ -14,11 +14,10 @@
 
 class Solver {
 public:
-	Solver(const GeneralParameter &_params, const Stepsize &_stepsize) : 
+	Solver(const GeneralParameter& _params, const Stepsize& _stepsize) : 
 		params(_params), stepsize(_stepsize) {init();};
-
 	virtual const int solve() = 0;
-	virtual int getStatus();
+	virtual const int getStatus();
 	virtual const GeneralParameter & getParams();
 	virtual ~Solver();
 
@@ -27,7 +26,7 @@ protected:
 	int iter;
 	Status *status;
 	Stepsize stepsize;
-	const GeneralParameter &params;
+	const GeneralParameter& params;
 };
 
 #endif /* SOLVER_H_ */

@@ -10,11 +10,8 @@
 
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/vector.hpp>
-//#include <lemon/maps.h>
-//#include <lemon/list_graph.h>
 
 #include "Solver.h"
-#include "ProblemInstance.h"
 #include "State.h"
 #include "Resource.h"
 #include "Connection.h"
@@ -24,17 +21,12 @@
 #include "UniSimulator.h"
 #include "PlValueFunction.h"
 
-//using namespace lemon;
-using namespace boost::numeric::ublas;
-
 class SimpleSolver: public Solver {
 public:
-	SimpleSolver(const ProblemInstance& _prob, const SimpleParameter& _params);
+	SimpleSolver(boost::numeric::ublas::vector<State>& _states, const SimpleParameter& _params);
 	const int solve();
-
-protected:
-	const ProblemInstance& prob;
-	vector<vector<State> > states;
+private:
+	boost::numeric::ublas::vector<State> states;
 };
 
 #endif /* SIMPLESOLVER_H_ */

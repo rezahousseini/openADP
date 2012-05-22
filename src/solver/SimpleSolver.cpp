@@ -21,8 +21,8 @@
 	// vector<State> states;
 // }
 
-SimpleSolver::SimpleSolver(const ProblemInstance& _prob, const SimpleParameter &_params) : 
-	Solver(_params.general, STCStepsize(_params.stepsize)), prob(_prob), states() {
+SimpleSolver::SimpleSolver(boost::numeric::ublas::vector<State>& _states, const SimpleParameter &_params) : 
+	Solver(_params.general, STCStepsize(_params.stepsize)), states(_states) {
 	// vector<State> states;
 }
 

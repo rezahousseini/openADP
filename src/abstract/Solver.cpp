@@ -7,7 +7,7 @@
 
 #include "Solver.h"
 
-int Solver::getStatus() {
+const int Solver::getStatus() {
 
 	if (status) {
 		return status->init(this, this->iter);
@@ -18,7 +18,7 @@ int Solver::getStatus() {
 
 }
 
-const GeneralParameter & Solver::getParams() {
+const GeneralParameter& Solver::getParams() {
 	return params;
 }
 

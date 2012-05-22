@@ -1,1 +1,1 @@
-add_library(core Connection.cpp Model.cpp Resource.cpp State.cpp ProblemInstance.cpp)
+add_library(core Connection.cpp Model.cpp Resource.cpp State.cpp ProblemInstance.cpp Decision.cpp)
