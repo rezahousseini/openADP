@@ -3,7 +3,6 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/core.dir/Model.cpp.o"
   "CMakeFiles/core.dir/Resource.cpp.o"
   "CMakeFiles/core.dir/State.cpp.o"
-  "CMakeFiles/core.dir/ProblemInstance.cpp.o"
   "CMakeFiles/core.dir/Decision.cpp.o"
   "libcore.pdb"
   "libcore.a"

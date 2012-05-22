@@ -30,7 +30,9 @@ const int SimpleSolver::solve(void) {
 	// Iterate trough sample space
 	
 	for (int i=0; i<params.iterate; i++) {
-		// decision = 
+		for (int t=0; t<states.size(); t++) {
+			
+		} 
 	}
 	
 	return 0;

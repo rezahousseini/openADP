@@ -13,12 +13,6 @@ src/core/CMakeFiles/core.dir/Model.cpp.o: src/core/Model.h
 src/core/CMakeFiles/core.dir/Model.cpp.o: src/core/Resource.h
 src/core/CMakeFiles/core.dir/Model.cpp.o: src/abstract/Data.h
 
-src/core/CMakeFiles/core.dir/ProblemInstance.cpp.o: src/core/Decision.h
-src/core/CMakeFiles/core.dir/ProblemInstance.cpp.o: src/core/ProblemInstance.cpp
-src/core/CMakeFiles/core.dir/ProblemInstance.cpp.o: src/core/ProblemInstance.h
-src/core/CMakeFiles/core.dir/ProblemInstance.cpp.o: src/core/Resource.h
-src/core/CMakeFiles/core.dir/ProblemInstance.cpp.o: src/abstract/Data.h
-
 src/core/CMakeFiles/core.dir/Resource.cpp.o: src/core/Resource.cpp
 src/core/CMakeFiles/core.dir/Resource.cpp.o: src/core/Resource.h
 src/core/CMakeFiles/core.dir/Resource.cpp.o: src/abstract/Data.h

@@ -184,30 +184,6 @@ Model.cpp.s:
 	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Model.cpp.s
 .PHONY : Model.cpp.s
 
-ProblemInstance.o: ProblemInstance.cpp.o
-.PHONY : ProblemInstance.o
-
-# target to build an object file
-ProblemInstance.cpp.o:
-	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/ProblemInstance.cpp.o
-.PHONY : ProblemInstance.cpp.o
-
-ProblemInstance.i: ProblemInstance.cpp.i
-.PHONY : ProblemInstance.i
-
-# target to preprocess a source file
-ProblemInstance.cpp.i:
-	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/ProblemInstance.cpp.i
-.PHONY : ProblemInstance.cpp.i
-
-ProblemInstance.s: ProblemInstance.cpp.s
-.PHONY : ProblemInstance.s
-
-# target to generate assembly for a file
-ProblemInstance.cpp.s:
-	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/ProblemInstance.cpp.s
-.PHONY : ProblemInstance.cpp.s
-
 Resource.o: Resource.cpp.o
 .PHONY : Resource.o
 
@@ -274,9 +250,6 @@ help:
 	@echo "... Model.o"
 	@echo "... Model.i"
 	@echo "... Model.s"
-	@echo "... ProblemInstance.o"
-	@echo "... ProblemInstance.i"
-	@echo "... ProblemInstance.s"
 	@echo "... Resource.o"
 	@echo "... Resource.i"
 	@echo "... Resource.s"

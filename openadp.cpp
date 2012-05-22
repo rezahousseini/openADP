@@ -2,30 +2,27 @@
 #include <boost/numeric/ublas/vector.hpp>
 
 #include "SimpleSolver.h"
-#include "ProblemInstance.h"
 
 using namespace boost::numeric::ublas;
 
 int main(int argc, char *argv[]) {
 	SimpleParameter params;
 	params.general.iterate = 200;
-
-	ProblemInstance prob = ProblemInstance(argv[1]);
+	
 	vector<State> states(10);
 	
-	vector<Resource> resources;
-	vector<ValueFunction> valfuncs;
-	matrix<Decision> decisions;
-	
 	for (int i=0; i<10; i++) {
-		states(i) = State()
+		vector<Resource> resources(4);
+		vector<ValueFunction> valfuncs(4);
+		matrix<Decision> decisions(4, 4);
+		states(i) = State(resources, valfuncs, decisions);
 	}
 	
 	vector<vector<std::string> > resourceAttributes;
 	vector<vector<std::string> > decisionAttributes;
 	
-	vector<Resource> resources(4);
-	matrix<Connection> connections(4, 4);
+	// vector<Resource> resources(4);
+	// matrix<Connection> connections(4, 4);
 	
 	//resources(0) = Resource(0, 1);
 	//resources(1) = Resource(10, 1);
