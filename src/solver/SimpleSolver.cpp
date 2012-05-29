@@ -8,7 +8,7 @@
 //#include <boost/lexical_cast.hpp>
 #include "SimpleSolver.h"
 #include "Status.h"
-#include "ValueFunction.h"
+#include "PLValueFunction.h"
 #include "STCStepsize.h"
 
 // SimpleSolver::SimpleSolver(const vector<Resource> &_resources,
@@ -21,9 +21,16 @@
 	// vector<State> states;
 // }
 
-SimpleSolver::SimpleSolver(boost::numeric::ublas::vector<State>& _states, const SimpleParameter &_params) : 
-	Solver(_params.general, STCStepsize(_params.stepsize)), states(_states) {
-	// vector<State> states;
+using namespace boost::numeric::ublas;
+
+// SimpleSolver::SimpleSolver(vector<vector<Resource> >& resources, vector<matrix<Decision> >& decisions, 
+// const SimpleParameter &_params) : Solver(_params.general, STCStepsize(_params.stepsize)) {
+SimpleSolver::SimpleSolver(vector<vector<Resource> >& resources, vector<matrix<Decision> >& decisions, 
+const SimpleParameter &_params) {
+	for (int i=0; i<resources.size(); i++) {
+		vector<ValueFunction> valfuncs(resources(i).size());
+		states(i) = State(resources(i), valfuncs, decisions(i));
+	}
 }
 
 const int SimpleSolver::solve(void) {

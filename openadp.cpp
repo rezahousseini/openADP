@@ -1,5 +1,6 @@
 #include <string> // XXX need to be moved to SimpleSolver.h
-#include <boost/numeric/ublas/vector.hpp>
+// #include <boost/numeric/ublas/vector.hpp>
+// #include <boost/numeric/ublas/matrix.hpp>
 
 #include "SimpleSolver.h"
 
@@ -9,17 +10,11 @@ int main(int argc, char *argv[]) {
 	SimpleParameter params;
 	params.general.iterate = 200;
 	
-	vector<State> states(10);
-	
-	for (int i=0; i<10; i++) {
-		vector<Resource> resources(4);
-		vector<ValueFunction> valfuncs(4);
-		matrix<Decision> decisions(4, 4);
-		states(i) = State(resources, valfuncs, decisions);
-	}
-	
-	vector<vector<std::string> > resourceAttributes;
-	vector<vector<std::string> > decisionAttributes;
+	vector<vector<Resource> > resources(4);
+	vector<matrix<Decision> > decisions(4);
+
+	// vector<vector<std::string> > resourceAttributes;
+	// vector<vector<std::string> > decisionAttributes;
 	
 	// vector<Resource> resources(4);
 	// matrix<Connection> connections(4, 4);
@@ -49,7 +44,7 @@ int main(int argc, char *argv[]) {
 	//connections(3, 2) = Connection(10, 1);
 	//connections(3, 3) = Connection(0, 0);
 
-	SimpleSolver solver = SimpleSolver(states, params);
+	SimpleSolver solver = SimpleSolver(resources, decisions, params);
 	
 	return 0;
 }

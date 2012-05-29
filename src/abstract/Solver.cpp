@@ -7,21 +7,27 @@
 
 #include "Solver.h"
 
-const int Solver::getStatus() {
+template<typename T>
+Solver<T>::Solver() {}
 
-	if (status) {
-		return status->init(this, this->iter);
-	}
-	else {
-		return status->current(this->iter);
-	}
+template<typename T>
+Solver<T>::~Solver() {}
 
-}
+// template<typename T>
+// Solver<T>::Solver(const GeneralParameter& _params, const Stepsize& _stepsize) : 
+// params(_params), stepsize(_stepsize) {
+	
+// }
 
-const GeneralParameter& Solver::getParams() {
-	return params;
-}
+// const GeneralParameter& Solver<T>::getParams() const {return params;}
 
-Solver::~Solver() {
-	// TODO Auto-generated destructor stub
-}
+// const int Solver::getStatus() {
+
+	// if (status) {
+		// return status->init(this, this->iter);
+	// }
+	// else {
+		// return status->current(this->iter);
+	// }
+
+// }

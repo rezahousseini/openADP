@@ -8,25 +8,30 @@
 #ifndef SOLVER_H_
 #define SOLVER_H_
 
+#include <boost/numeric/ublas/vector.hpp>
+
 #include "GeneralParameter.h"
 #include "Stepsize.h"
 #include "Status.h"
 
+template<typename T>
 class Solver {
 public:
-	Solver(const GeneralParameter& _params, const Stepsize& _stepsize) : 
-		params(_params), stepsize(_stepsize) {init();};
-	virtual const int solve() = 0;
-	virtual const int getStatus();
-	virtual const GeneralParameter & getParams();
+	Solver();
 	virtual ~Solver();
+	T valfunction;
+	// explicit Solver(const GeneralParameter& _params, const Stepsize& _stepsize);
+	// virtual const int solve() = 0;
+	// virtual const int getStatus();
+	// virtual const GeneralParameter& getParams() const;
+	// virtual ~Solver() {};
 
-protected:
-	virtual void init(void) {};
-	int iter;
-	Status *status;
-	Stepsize stepsize;
-	const GeneralParameter& params;
+// protected:
+	// int iter;
+	// Status *status;
+	// Stepsize stepsize;
+	// const GeneralParameter& params;
+	// boost::numeric::ublas::vector<T> valfuncs;
 };
 
 #endif /* SOLVER_H_ */
