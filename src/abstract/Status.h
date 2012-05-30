@@ -8,7 +8,7 @@
 #ifndef STATUS_H_
 #define STATUS_H_
 
-class Solver;
+//class Solver;
 
 enum TerminationCode {
   SUCCESSFUL_TERMINATION = 0,
@@ -21,13 +21,13 @@ enum TerminationCode {
 class Status {
 public:
 	Status();
-	virtual int init(Solver *solver, int iteration);
+	//virtual int init(Solver *solver, int iteration);
 	virtual int current(int iteration);
 	virtual ~Status();
 
 protected:
 	int iteration;
-	Solver *solver;
+	//Solver *solver;
 };
 
 #endif /* STATUS_H_ */

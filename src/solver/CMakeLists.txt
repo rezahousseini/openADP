@@ -1,1 +1,1 @@
-add_library(solver SimpleSolver.cpp)
+add_library(solver LinearSolver.cpp)

@@ -6,20 +6,20 @@
  */
 
 #include "Status.h"
-#include "Solver.h"
+//#include "Solver.h"
 
 Status::Status() {
 	// TODO Auto-generated constructor stub
 
 }
 
-int Status::init(Solver *solver, int iteration) {
+//int Status::init(Solver *solver, int iteration) {
 
-	this->solver = solver;
-	this->iteration = iteration;
+	//this->solver = solver;
+	//this->iteration = iteration;
 
-	return NOT_FINISHED;
-}
+	//return NOT_FINISHED;
+//}
 
 int Status::current(int iteration) {
 
