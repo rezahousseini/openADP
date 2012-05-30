@@ -7,9 +7,9 @@
 
 #include "Solver.h"
 
-template<typename T>
-Solver<T>::Solver(const GeneralParameter& _params, const Stepsize& _stepsize) : 
-params(_params), stepsize(_stepsize) {
+template<typename T1, typename T2>
+Solver<T1, T2>::Solver(const SimpleParameter& _params) : 
+gparams(_params.general), sparams(_params.stepsize) {
 	
 }
 

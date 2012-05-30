@@ -30,24 +30,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake.exe
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/bin/cmake.exe -E remove -f
+
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/reza/workspace/openADP
+CMAKE_SOURCE_DIR = /home/hous/workspace/openADP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/reza/workspace/openADP
+CMAKE_BINARY_DIR = /home/hous/workspace/openADP
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -57,7 +60,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -66,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/reza/workspace/openADP && $(CMAKE_COMMAND) -E cmake_progress_start /home/reza/workspace/openADP/CMakeFiles /home/reza/workspace/openADP/src/core/CMakeFiles/progress.marks
-	cd /home/reza/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/core/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/reza/workspace/openADP/CMakeFiles 0
+	cd /home/hous/workspace/openADP && $(CMAKE_COMMAND) -E cmake_progress_start /home/hous/workspace/openADP/CMakeFiles /home/hous/workspace/openADP/src/core/CMakeFiles/progress.marks
+	cd /home/hous/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/core/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hous/workspace/openADP/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/reza/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/core/clean
+	cd /home/hous/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/core/clean
 .PHONY : clean
 
 # The main clean target
@@ -82,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/reza/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/core/preinstall
+	cd /home/hous/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/core/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/reza/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/core/preinstall
+	cd /home/hous/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/core/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/reza/workspace/openADP && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hous/workspace/openADP && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/core/CMakeFiles/core.dir/rule:
-	cd /home/reza/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/core/CMakeFiles/core.dir/rule
+	cd /home/hous/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/core/CMakeFiles/core.dir/rule
 .PHONY : src/core/CMakeFiles/core.dir/rule
 
 # Convenience name for target.
@@ -106,7 +109,7 @@ core: src/core/CMakeFiles/core.dir/rule
 
 # fast build rule for target.
 core/fast:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/build
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/build
 .PHONY : core/fast
 
 Connection.o: Connection.cpp.o
@@ -114,7 +117,7 @@ Connection.o: Connection.cpp.o
 
 # target to build an object file
 Connection.cpp.o:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Connection.cpp.o
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Connection.cpp.o
 .PHONY : Connection.cpp.o
 
 Connection.i: Connection.cpp.i
@@ -122,7 +125,7 @@ Connection.i: Connection.cpp.i
 
 # target to preprocess a source file
 Connection.cpp.i:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Connection.cpp.i
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Connection.cpp.i
 .PHONY : Connection.cpp.i
 
 Connection.s: Connection.cpp.s
@@ -130,7 +133,7 @@ Connection.s: Connection.cpp.s
 
 # target to generate assembly for a file
 Connection.cpp.s:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Connection.cpp.s
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Connection.cpp.s
 .PHONY : Connection.cpp.s
 
 Decision.o: Decision.cpp.o
@@ -138,7 +141,7 @@ Decision.o: Decision.cpp.o
 
 # target to build an object file
 Decision.cpp.o:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Decision.cpp.o
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Decision.cpp.o
 .PHONY : Decision.cpp.o
 
 Decision.i: Decision.cpp.i
@@ -146,7 +149,7 @@ Decision.i: Decision.cpp.i
 
 # target to preprocess a source file
 Decision.cpp.i:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Decision.cpp.i
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Decision.cpp.i
 .PHONY : Decision.cpp.i
 
 Decision.s: Decision.cpp.s
@@ -154,7 +157,7 @@ Decision.s: Decision.cpp.s
 
 # target to generate assembly for a file
 Decision.cpp.s:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Decision.cpp.s
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Decision.cpp.s
 .PHONY : Decision.cpp.s
 
 Model.o: Model.cpp.o
@@ -162,7 +165,7 @@ Model.o: Model.cpp.o
 
 # target to build an object file
 Model.cpp.o:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Model.cpp.o
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Model.cpp.o
 .PHONY : Model.cpp.o
 
 Model.i: Model.cpp.i
@@ -170,7 +173,7 @@ Model.i: Model.cpp.i
 
 # target to preprocess a source file
 Model.cpp.i:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Model.cpp.i
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Model.cpp.i
 .PHONY : Model.cpp.i
 
 Model.s: Model.cpp.s
@@ -178,7 +181,7 @@ Model.s: Model.cpp.s
 
 # target to generate assembly for a file
 Model.cpp.s:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Model.cpp.s
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Model.cpp.s
 .PHONY : Model.cpp.s
 
 Resource.o: Resource.cpp.o
@@ -186,7 +189,7 @@ Resource.o: Resource.cpp.o
 
 # target to build an object file
 Resource.cpp.o:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Resource.cpp.o
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Resource.cpp.o
 .PHONY : Resource.cpp.o
 
 Resource.i: Resource.cpp.i
@@ -194,7 +197,7 @@ Resource.i: Resource.cpp.i
 
 # target to preprocess a source file
 Resource.cpp.i:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Resource.cpp.i
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Resource.cpp.i
 .PHONY : Resource.cpp.i
 
 Resource.s: Resource.cpp.s
@@ -202,7 +205,7 @@ Resource.s: Resource.cpp.s
 
 # target to generate assembly for a file
 Resource.cpp.s:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Resource.cpp.s
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Resource.cpp.s
 .PHONY : Resource.cpp.s
 
 State.o: State.cpp.o
@@ -210,7 +213,7 @@ State.o: State.cpp.o
 
 # target to build an object file
 State.cpp.o:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/State.cpp.o
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/State.cpp.o
 .PHONY : State.cpp.o
 
 State.i: State.cpp.i
@@ -218,7 +221,7 @@ State.i: State.cpp.i
 
 # target to preprocess a source file
 State.cpp.i:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/State.cpp.i
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/State.cpp.i
 .PHONY : State.cpp.i
 
 State.s: State.cpp.s
@@ -226,7 +229,7 @@ State.s: State.cpp.s
 
 # target to generate assembly for a file
 State.cpp.s:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/State.cpp.s
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/State.cpp.s
 .PHONY : State.cpp.s
 
 # Help Target
@@ -264,6 +267,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/reza/workspace/openADP && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hous/workspace/openADP && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

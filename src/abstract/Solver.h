@@ -11,29 +11,29 @@
 //#include <boost/numeric/ublas/vector.hpp>
 
 #include "GeneralParameter.h"
+#include "SimpleParameter.h"
 #include "Stepsize.h"
+#include "STCStepsize.h"
 //#include "Status.h"
 #include "PLValueFunction.h"
 
-template<typename T>
+template<typename T1, typename T2>
 class Solver {
 public:
-	Solver(const GeneralParameter& _params, const Stepsize& _stepsize);
+	Solver(const SimpleParameter& _params);
 	//virtual const int solve() = 0;
 	// virtual const int getStatus();
 	// virtual const GeneralParameter& getParams() const;
 	virtual ~Solver() {};
 
-// protected:
+protected:
 	// int iter;
 	// Status *status;
-	Stepsize stepsize;
-	const GeneralParameter& params;
+	T1 valfunc;
+	T2 stepsize;
+	const GeneralParameter& gparams;
+	const StepsizeParameter& sparams;
 	// boost::numeric::ublas::vector<T> valfuncs;
-};
-
-template<>
-class Solver<PLValueFunction> {
 };
 
 #endif /* SOLVER_H_ */

@@ -30,24 +30,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake.exe
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/bin/cmake.exe -E remove -f
+
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/reza/workspace/openADP
+CMAKE_SOURCE_DIR = /home/hous/workspace/openADP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/reza/workspace/openADP
+CMAKE_BINARY_DIR = /home/hous/workspace/openADP
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -57,7 +60,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -66,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/reza/workspace/openADP && $(CMAKE_COMMAND) -E cmake_progress_start /home/reza/workspace/openADP/CMakeFiles /home/reza/workspace/openADP/src/exception/CMakeFiles/progress.marks
-	cd /home/reza/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/exception/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/reza/workspace/openADP/CMakeFiles 0
+	cd /home/hous/workspace/openADP && $(CMAKE_COMMAND) -E cmake_progress_start /home/hous/workspace/openADP/CMakeFiles /home/hous/workspace/openADP/src/exception/CMakeFiles/progress.marks
+	cd /home/hous/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/exception/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hous/workspace/openADP/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/reza/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/exception/clean
+	cd /home/hous/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/exception/clean
 .PHONY : clean
 
 # The main clean target
@@ -82,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/reza/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/exception/preinstall
+	cd /home/hous/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/exception/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/reza/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/exception/preinstall
+	cd /home/hous/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/exception/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/reza/workspace/openADP && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hous/workspace/openADP && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/exception/CMakeFiles/exception.dir/rule:
-	cd /home/reza/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/exception/CMakeFiles/exception.dir/rule
+	cd /home/hous/workspace/openADP && $(MAKE) -f CMakeFiles/Makefile2 src/exception/CMakeFiles/exception.dir/rule
 .PHONY : src/exception/CMakeFiles/exception.dir/rule
 
 # Convenience name for target.
@@ -106,7 +109,7 @@ exception: src/exception/CMakeFiles/exception.dir/rule
 
 # fast build rule for target.
 exception/fast:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/exception/CMakeFiles/exception.dir/build.make src/exception/CMakeFiles/exception.dir/build
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/exception/CMakeFiles/exception.dir/build.make src/exception/CMakeFiles/exception.dir/build
 .PHONY : exception/fast
 
 MyException.o: MyException.cpp.o
@@ -114,7 +117,7 @@ MyException.o: MyException.cpp.o
 
 # target to build an object file
 MyException.cpp.o:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/exception/CMakeFiles/exception.dir/build.make src/exception/CMakeFiles/exception.dir/MyException.cpp.o
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/exception/CMakeFiles/exception.dir/build.make src/exception/CMakeFiles/exception.dir/MyException.cpp.o
 .PHONY : MyException.cpp.o
 
 MyException.i: MyException.cpp.i
@@ -122,7 +125,7 @@ MyException.i: MyException.cpp.i
 
 # target to preprocess a source file
 MyException.cpp.i:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/exception/CMakeFiles/exception.dir/build.make src/exception/CMakeFiles/exception.dir/MyException.cpp.i
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/exception/CMakeFiles/exception.dir/build.make src/exception/CMakeFiles/exception.dir/MyException.cpp.i
 .PHONY : MyException.cpp.i
 
 MyException.s: MyException.cpp.s
@@ -130,7 +133,7 @@ MyException.s: MyException.cpp.s
 
 # target to generate assembly for a file
 MyException.cpp.s:
-	cd /home/reza/workspace/openADP && $(MAKE) -f src/exception/CMakeFiles/exception.dir/build.make src/exception/CMakeFiles/exception.dir/MyException.cpp.s
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/exception/CMakeFiles/exception.dir/build.make src/exception/CMakeFiles/exception.dir/MyException.cpp.s
 .PHONY : MyException.cpp.s
 
 # Help Target
@@ -156,6 +159,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/reza/workspace/openADP && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hous/workspace/openADP && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

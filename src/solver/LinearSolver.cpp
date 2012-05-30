@@ -23,10 +23,10 @@
 
 using namespace boost::numeric::ublas;
 
+// LinearSolver::LinearSolver(vector<vector<Resource> >& resources, vector<matrix<Decision> >& decisions, 
+// const SimpleParameter &_params) : Solver(_params.general, STCStepsize(_params.stepsize)) {
 LinearSolver::LinearSolver(vector<vector<Resource> >& resources, vector<matrix<Decision> >& decisions, 
-const SimpleParameter &_params) : Solver(_params.general, STCStepsize(_params.stepsize)) {
-//LinearSolver::LinearSolver(vector<vector<Resource> >& resources, vector<matrix<Decision> >& decisions, 
-//const SimpleParameter &_params) {
+const SimpleParameter &_params) : params(_params.general) {
 	
 	for (int i=0; i<resources.size(); i++) {
 		vector<ValueFunction> valfuncs(resources(i).size());

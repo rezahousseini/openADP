@@ -22,9 +22,9 @@
 #include "UniSimulator.h"
 #include "PLValueFunction.h"
 
-template<typename T>
-class LinearSolver : public Solver<T> {
-//class LinearSolver {
+// template<typename T>
+// class LinearSolver : public Solver<T> {
+class LinearSolver {
 public:
 	LinearSolver(boost::numeric::ublas::vector<boost::numeric::ublas::vector<Resource> >& _resources, 
 	boost::numeric::ublas::vector<boost::numeric::ublas::matrix<Decision> >& _decisions,
@@ -32,6 +32,7 @@ public:
 	const int solve();
 private:
 	boost::numeric::ublas::vector<State> states;
+	const GeneralParameter &params;
 };
 
 #endif /* LINEARSOLVER_H_ */

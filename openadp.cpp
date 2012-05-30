@@ -2,7 +2,7 @@
 // #include <boost/numeric/ublas/vector.hpp>
 // #include <boost/numeric/ublas/matrix.hpp>
 
-#include "SimpleSolver.h"
+#include "LinearSolver.h"
 
 using namespace boost::numeric::ublas;
 
@@ -44,7 +44,8 @@ int main(int argc, char *argv[]) {
 	//connections(3, 2) = Connection(10, 1);
 	//connections(3, 3) = Connection(0, 0);
 
-	SimpleSolver solver = SimpleSolver(resources, decisions, params);
+	Solver<PLValueFunction, STCStepsize> sol;
+	LinearSolver solver = LinearSolver(resources, decisions, params);
 	
 	return 0;
 }
