@@ -1,8 +1,13 @@
-#include <string> // XXX need to be moved to SimpleSolver.h
+// #include <string> // XXX need to be moved to SimpleSolver.h
 // #include <boost/numeric/ublas/vector.hpp>
 // #include <boost/numeric/ublas/matrix.hpp>
 
-#include "LinearSolver.h"
+#include "Solver.h"
+#include "Resource.h"
+#include "Decision.h"
+#include "SimpleParameter.h"
+#include "PLValueFunction.h"
+#include "STCStepsize.h"
 
 using namespace boost::numeric::ublas;
 
@@ -12,6 +17,8 @@ int main(int argc, char *argv[]) {
 	
 	vector<vector<Resource> > resources(4);
 	vector<matrix<Decision> > decisions(4);
+	
+	Solver<PLValueFunction, STCStepsize> sol(resources, decisions, params);
 
 	// vector<vector<std::string> > resourceAttributes;
 	// vector<vector<std::string> > decisionAttributes;
@@ -44,8 +51,7 @@ int main(int argc, char *argv[]) {
 	//connections(3, 2) = Connection(10, 1);
 	//connections(3, 3) = Connection(0, 0);
 
-	Solver<PLValueFunction, STCStepsize> sol;
-	LinearSolver solver = LinearSolver(resources, decisions, params);
+	// LinearSolver solver = LinearSolver(resources, decisions, params);
 	
 	return 0;
 }

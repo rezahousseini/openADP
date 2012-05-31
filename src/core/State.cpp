@@ -12,8 +12,11 @@ using namespace boost::numeric::ublas;
 State::State() {
 }
 
-State::State(vector<Resource>& _resources, vector<ValueFunction>& _valfuncs,
- matrix<Decision>& _decisions) : resources(_resources), valfuncs(_valfuncs), decisions(_decisions) {
+State::State(
+	vector<Resource>& _resources, 
+	vector<ValueFunction>& _valfuncs,
+	matrix<Decision>& _decisions
+) : resources(_resources), valfuncs(_valfuncs), decisions(_decisions) {
 }
 
 State::~State() {

@@ -14,7 +14,7 @@
 class StepsizeParameter : public Parameter {
 public:
 	StepsizeParameter();
-	virtual ~StepsizeParameter();
+	~StepsizeParameter();
 	float alpha0;
 	float beta;
 	float a;

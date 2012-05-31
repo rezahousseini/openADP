@@ -18,9 +18,11 @@
 class State {
 public:
 	State();
-	State(boost::numeric::ublas::vector<Resource>& _resources, 
+	State(
+		boost::numeric::ublas::vector<Resource>& _resources, 
 		boost::numeric::ublas::vector<ValueFunction>& _valfuncs,
-		boost::numeric::ublas::matrix<Decision>& _decisions);
+		boost::numeric::ublas::matrix<Decision>& _decisions
+	);
 	~State();
 
 	boost::numeric::ublas::vector<Resource> resources;

@@ -1,7 +1,7 @@
 #include "STCStepsize.h"
 #include <math.h>
 
-STCStepsize::STCStepsize(const STCStepsizeParameter &_params) : 
+STCStepsize::STCStepsize(const StepsizeParameter &_params) : 
  Stepsize(_params), params(_params) {
 	 alpha = params.alpha0;
 }

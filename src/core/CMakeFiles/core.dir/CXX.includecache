@@ -6,35 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hous/workspace/openADP/src/core/Connection.cpp
-Connection.h
-/home/hous/workspace/openADP/src/core/Connection.h
-
-/home/hous/workspace/openADP/src/core/Connection.h
-
-/home/hous/workspace/openADP/src/core/Decision.cpp
-Decision.h
 /home/hous/workspace/openADP/src/core/Decision.h
-
-/home/hous/workspace/openADP/src/core/Decision.h
-
-/home/hous/workspace/openADP/src/core/Model.cpp
-Model.h
-/home/hous/workspace/openADP/src/core/Model.h
-
-/home/hous/workspace/openADP/src/core/Model.h
-boost/numeric/ublas/matrix.hpp
--
-boost/numeric/ublas/vector.hpp
--
-Resource.h
-/home/hous/workspace/openADP/src/core/Resource.h
-Connection.h
-/home/hous/workspace/openADP/src/core/Connection.h
-
-/home/hous/workspace/openADP/src/core/Resource.cpp
-Resource.h
-/home/hous/workspace/openADP/src/core/Resource.h
 
 /home/hous/workspace/openADP/src/core/Resource.h
 string

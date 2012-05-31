@@ -10,15 +10,14 @@
 
 #include "Parameter.h"
 #include "GeneralParameter.h"
-#include "STCStepsizeParameter.h"
-
+#include "StepsizeParameter.h"
 
 class SimpleParameter : public Parameter {
 public:
 	SimpleParameter();
 	virtual ~SimpleParameter();
 	GeneralParameter general;
-	STCStepsizeParameter stepsize;
+	StepsizeParameter stepsize;
 };
 
 #endif /* SIMPLEPARAMETER_H_ */

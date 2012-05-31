@@ -2,14 +2,14 @@
 #define STCSTEPSIZE_H_
 
 #include "Stepsize.h"
-#include "STCStepsizeParameter.h"
+#include "StepsizeParameter.h"
 
 class STCStepsize : public Stepsize {
 	public:
-		STCStepsize(const STCStepsizeParameter &_params);
+		STCStepsize(const StepsizeParameter& _params);
 		void update(void);
 	protected:
-		const STCStepsizeParameter &params;
+		const StepsizeParameter& params;
 };
 
 #endif /* STCSTEPSIZE_H_ */
