@@ -7,12 +7,11 @@
 
 #include "PLValueFunction.h"
 
-PLValueFunction::PLValueFunction() {
+PLValueFunction::PLValueFunction() : weights() {
 }
 
-// PLValueFunction::PLValueFunction(int numbers) {
-	// //weights = vector<ListDigraph::Arc> (numbers);
-// }
+PLValueFunction::PLValueFunction(const GeneralParameter& _params) : weights(_params.scale), params(_params) {
+}
 
 void PLValueFunction::update() {
 

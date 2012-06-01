@@ -11,16 +11,16 @@ src/core/CMakeFiles/core.dir/Model.cpp.o: src/core/Connection.h
 src/core/CMakeFiles/core.dir/Model.cpp.o: src/core/Model.cpp
 src/core/CMakeFiles/core.dir/Model.cpp.o: src/core/Model.h
 src/core/CMakeFiles/core.dir/Model.cpp.o: src/core/Resource.h
-src/core/CMakeFiles/core.dir/Model.cpp.o: src/abstract/Data.h
 
 src/core/CMakeFiles/core.dir/Resource.cpp.o: src/core/Resource.cpp
 src/core/CMakeFiles/core.dir/Resource.cpp.o: src/core/Resource.h
-src/core/CMakeFiles/core.dir/Resource.cpp.o: src/abstract/Data.h
 
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/Decision.h
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/Resource.h
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/State.cpp
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/State.h
-src/core/CMakeFiles/core.dir/State.cpp.o: src/abstract/Data.h
-src/core/CMakeFiles/core.dir/State.cpp.o: src/abstract/ValueFunction.h
+src/core/CMakeFiles/core.dir/State.cpp.o: src/parameter/GeneralParameter.h
+src/core/CMakeFiles/core.dir/State.cpp.o: src/parameter/Parameter.h
+src/core/CMakeFiles/core.dir/State.cpp.o: src/valuefunction/PLValueFunction.h
+src/core/CMakeFiles/core.dir/State.cpp.o: src/valuefunction/ValueFunction.h
 

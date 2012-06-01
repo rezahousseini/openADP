@@ -6,19 +6,17 @@
  */
 
 #include "State.h"
+#include "PLValueFunction.h"
 
 using namespace boost::numeric::ublas;
 
-State::State() {
+template<typename T>
+State<T>::State(
+	vector<Resource>& _resources,
+	matrix<Decision>& _decisions,
+	const GeneralParameter& params
+) : resources(_resources), decisions(_decisions), valfuncs(_resources.size(), T(params)) {
+
 }
 
-State::State(
-	vector<Resource>& _resources, 
-	vector<ValueFunction>& _valfuncs,
-	matrix<Decision>& _decisions
-) : resources(_resources), valfuncs(_valfuncs), decisions(_decisions) {
-}
-
-State::~State() {
-	// TODO Auto-generated destructor stub
-}
+template class State<PLValueFunction>;

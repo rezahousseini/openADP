@@ -10,13 +10,11 @@
 
 #include "Parameter.h"
 
-
 class GeneralParameter : public Parameter {
 public:
 	GeneralParameter();
 	virtual ~GeneralParameter();
 	int iterate;
-	int horizon;
 	int scale;
 };
 

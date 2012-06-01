@@ -10,13 +10,11 @@
 
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/vector.hpp>
-#include <vector>
+// #include <vector>
 
 #include "GeneralParameter.h"
 #include "SimpleParameter.h"
-// #include "Stepsize.h"
 //#include "Status.h"
-
 #include "State.h"
 #include "Resource.h"
 #include "Decision.h"
@@ -29,22 +27,22 @@ public:
 		boost::numeric::ublas::vector<boost::numeric::ublas::matrix<Decision> >& decisions,
 		const SimpleParameter& _params
 	);
-	//virtual const int solve() = 0;
+	const int solve();
 	// virtual const int getStatus();
 	// virtual const GeneralParameter& getParams() const;
-	virtual ~Solver() {};
+	~Solver() {};
 
-protected:
+// protected:
 	// int iter;
 	// Status *status;
-	std::vector<T1> valfuncs;
-	T2 stepsize;
-	const SimpleParameter params;
+	
 	// const GeneralParameter& gparams;
 	// const StepsizeParameter& sparams;
 	
 private:
-	// boost::numeric::ublas::vector<State> states;
+	std::vector<State<T1> > states;
+	T2 stepsize;
+	const GeneralParameter& params;
 };
 
 #endif /* SOLVER_H_ */

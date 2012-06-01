@@ -11,7 +11,7 @@ ValueFunction::ValueFunction() {
 
 }
 
-ValueFunction::ValueFunction(int numberFeatures) {
+// ValueFunction::ValueFunction(int numberFeatures) {
 
 //ValueFunction::ValueFunction(ListDigraph &graph, ListDigraph::Node &node, int numberFeatures) {
 //	approxCostMap(graph);
@@ -22,7 +22,7 @@ ValueFunction::ValueFunction(int numberFeatures) {
 //		ListDigraph::Arc arc = graph.addArc(node, emptyNode);
 //		approxCostMap[arc] = 0;
 //	}
-}
+// }
 
 ValueFunction::~ValueFunction() {
 	// TODO Auto-generated destructor stub

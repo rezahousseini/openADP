@@ -12,7 +12,7 @@
 #include <boost/numeric/ublas/vector.hpp>
 
 #include "Solver.h"
-#include "State.h"
+// #include "State.h"
 #include "Resource.h"
 #include "Decision.h"
 #include "Connection.h"
@@ -31,7 +31,7 @@ public:
 	const SimpleParameter& _params);
 	const int solve();
 private:
-	boost::numeric::ublas::vector<State> states;
+	// boost::numeric::ublas::vector<State> states;
 	const GeneralParameter &params;
 };
 

@@ -11,14 +11,16 @@
 /home/hous/workspace/openADP/src/core/Resource.h
 string
 -
-Data.h
-/home/hous/workspace/openADP/src/core/Data.h
 
 /home/hous/workspace/openADP/src/core/State.cpp
 State.h
 /home/hous/workspace/openADP/src/core/State.h
+PLValueFunction.h
+/home/hous/workspace/openADP/src/core/PLValueFunction.h
 
 /home/hous/workspace/openADP/src/core/State.h
+vector
+-
 boost/numeric/ublas/vector.hpp
 -
 boost/numeric/ublas/matrix.hpp
@@ -29,8 +31,22 @@ ValueFunction.h
 /home/hous/workspace/openADP/src/core/ValueFunction.h
 Decision.h
 /home/hous/workspace/openADP/src/core/Decision.h
+GeneralParameter.h
+/home/hous/workspace/openADP/src/core/GeneralParameter.h
 
-src/abstract/Data.h
+src/parameter/GeneralParameter.h
+Parameter.h
+src/parameter/Parameter.h
 
-src/abstract/ValueFunction.h
+src/parameter/Parameter.h
+
+src/valuefunction/PLValueFunction.h
+boost/numeric/ublas/matrix.hpp
+-
+ValueFunction.h
+src/valuefunction/ValueFunction.h
+GeneralParameter.h
+src/valuefunction/GeneralParameter.h
+
+src/valuefunction/ValueFunction.h
 

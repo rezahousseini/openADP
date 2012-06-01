@@ -8,16 +8,20 @@
 #ifndef PLVALUEFUNCTION_H_
 #define PLVALUEFUNCTION_H_
 
-#include "ValueFunction.h"
 #include <boost/numeric/ublas/matrix.hpp>
+
+#include "ValueFunction.h"
+#include "GeneralParameter.h"
 
 class PLValueFunction : ValueFunction {
 public:
 	PLValueFunction();
-	// PLValueFunction(int numbers);
+	PLValueFunction(const GeneralParameter& _params);
 	~PLValueFunction();
 	void update();
-	//boost::numeric::ublas::vector<ListDigraph::Arc> weights; // weights for the arcs
+private:
+	boost::numeric::ublas::vector<float> weights;
+	const GeneralParameter& params;
 };
 
 #endif /* PLVALUEFUNCTION_H_ */
