@@ -26,19 +26,16 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake.exe
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake.exe -E remove -f
-
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
+RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hous/workspace/openADP
+CMAKE_SOURCE_DIR = /home/reza/workspace/openADP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hous/workspace/openADP
+CMAKE_BINARY_DIR = /home/reza/workspace/openADP
 
 # Include any dependencies generated for this target.
 include src/core/CMakeFiles/core.dir/depend.make
@@ -51,17 +48,17 @@ include src/core/CMakeFiles/core.dir/flags.make
 
 src/core/CMakeFiles/core.dir/Connection.cpp.o: src/core/CMakeFiles/core.dir/flags.make
 src/core/CMakeFiles/core.dir/Connection.cpp.o: src/core/Connection.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hous/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/reza/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/core/CMakeFiles/core.dir/Connection.cpp.o"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Connection.cpp.o -c /home/hous/workspace/openADP/src/core/Connection.cpp
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Connection.cpp.o -c /home/reza/workspace/openADP/src/core/Connection.cpp
 
 src/core/CMakeFiles/core.dir/Connection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Connection.cpp.i"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hous/workspace/openADP/src/core/Connection.cpp > CMakeFiles/core.dir/Connection.cpp.i
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/reza/workspace/openADP/src/core/Connection.cpp > CMakeFiles/core.dir/Connection.cpp.i
 
 src/core/CMakeFiles/core.dir/Connection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Connection.cpp.s"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hous/workspace/openADP/src/core/Connection.cpp -o CMakeFiles/core.dir/Connection.cpp.s
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/reza/workspace/openADP/src/core/Connection.cpp -o CMakeFiles/core.dir/Connection.cpp.s
 
 src/core/CMakeFiles/core.dir/Connection.cpp.o.requires:
 .PHONY : src/core/CMakeFiles/core.dir/Connection.cpp.o.requires
@@ -74,17 +71,17 @@ src/core/CMakeFiles/core.dir/Connection.cpp.o.provides.build: src/core/CMakeFile
 
 src/core/CMakeFiles/core.dir/Model.cpp.o: src/core/CMakeFiles/core.dir/flags.make
 src/core/CMakeFiles/core.dir/Model.cpp.o: src/core/Model.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hous/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/reza/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/core/CMakeFiles/core.dir/Model.cpp.o"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Model.cpp.o -c /home/hous/workspace/openADP/src/core/Model.cpp
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Model.cpp.o -c /home/reza/workspace/openADP/src/core/Model.cpp
 
 src/core/CMakeFiles/core.dir/Model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Model.cpp.i"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hous/workspace/openADP/src/core/Model.cpp > CMakeFiles/core.dir/Model.cpp.i
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/reza/workspace/openADP/src/core/Model.cpp > CMakeFiles/core.dir/Model.cpp.i
 
 src/core/CMakeFiles/core.dir/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Model.cpp.s"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hous/workspace/openADP/src/core/Model.cpp -o CMakeFiles/core.dir/Model.cpp.s
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/reza/workspace/openADP/src/core/Model.cpp -o CMakeFiles/core.dir/Model.cpp.s
 
 src/core/CMakeFiles/core.dir/Model.cpp.o.requires:
 .PHONY : src/core/CMakeFiles/core.dir/Model.cpp.o.requires
@@ -97,17 +94,17 @@ src/core/CMakeFiles/core.dir/Model.cpp.o.provides.build: src/core/CMakeFiles/cor
 
 src/core/CMakeFiles/core.dir/Resource.cpp.o: src/core/CMakeFiles/core.dir/flags.make
 src/core/CMakeFiles/core.dir/Resource.cpp.o: src/core/Resource.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hous/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/reza/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/core/CMakeFiles/core.dir/Resource.cpp.o"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Resource.cpp.o -c /home/hous/workspace/openADP/src/core/Resource.cpp
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Resource.cpp.o -c /home/reza/workspace/openADP/src/core/Resource.cpp
 
 src/core/CMakeFiles/core.dir/Resource.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Resource.cpp.i"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hous/workspace/openADP/src/core/Resource.cpp > CMakeFiles/core.dir/Resource.cpp.i
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/reza/workspace/openADP/src/core/Resource.cpp > CMakeFiles/core.dir/Resource.cpp.i
 
 src/core/CMakeFiles/core.dir/Resource.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Resource.cpp.s"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hous/workspace/openADP/src/core/Resource.cpp -o CMakeFiles/core.dir/Resource.cpp.s
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/reza/workspace/openADP/src/core/Resource.cpp -o CMakeFiles/core.dir/Resource.cpp.s
 
 src/core/CMakeFiles/core.dir/Resource.cpp.o.requires:
 .PHONY : src/core/CMakeFiles/core.dir/Resource.cpp.o.requires
@@ -120,17 +117,17 @@ src/core/CMakeFiles/core.dir/Resource.cpp.o.provides.build: src/core/CMakeFiles/
 
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/CMakeFiles/core.dir/flags.make
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/State.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hous/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/reza/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/core/CMakeFiles/core.dir/State.cpp.o"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/State.cpp.o -c /home/hous/workspace/openADP/src/core/State.cpp
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/State.cpp.o -c /home/reza/workspace/openADP/src/core/State.cpp
 
 src/core/CMakeFiles/core.dir/State.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/State.cpp.i"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hous/workspace/openADP/src/core/State.cpp > CMakeFiles/core.dir/State.cpp.i
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/reza/workspace/openADP/src/core/State.cpp > CMakeFiles/core.dir/State.cpp.i
 
 src/core/CMakeFiles/core.dir/State.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/State.cpp.s"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hous/workspace/openADP/src/core/State.cpp -o CMakeFiles/core.dir/State.cpp.s
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/reza/workspace/openADP/src/core/State.cpp -o CMakeFiles/core.dir/State.cpp.s
 
 src/core/CMakeFiles/core.dir/State.cpp.o.requires:
 .PHONY : src/core/CMakeFiles/core.dir/State.cpp.o.requires
@@ -143,17 +140,17 @@ src/core/CMakeFiles/core.dir/State.cpp.o.provides.build: src/core/CMakeFiles/cor
 
 src/core/CMakeFiles/core.dir/Decision.cpp.o: src/core/CMakeFiles/core.dir/flags.make
 src/core/CMakeFiles/core.dir/Decision.cpp.o: src/core/Decision.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hous/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/reza/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/core/CMakeFiles/core.dir/Decision.cpp.o"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Decision.cpp.o -c /home/hous/workspace/openADP/src/core/Decision.cpp
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Decision.cpp.o -c /home/reza/workspace/openADP/src/core/Decision.cpp
 
 src/core/CMakeFiles/core.dir/Decision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Decision.cpp.i"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hous/workspace/openADP/src/core/Decision.cpp > CMakeFiles/core.dir/Decision.cpp.i
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/reza/workspace/openADP/src/core/Decision.cpp > CMakeFiles/core.dir/Decision.cpp.i
 
 src/core/CMakeFiles/core.dir/Decision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Decision.cpp.s"
-	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hous/workspace/openADP/src/core/Decision.cpp -o CMakeFiles/core.dir/Decision.cpp.s
+	cd /home/reza/workspace/openADP/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/reza/workspace/openADP/src/core/Decision.cpp -o CMakeFiles/core.dir/Decision.cpp.s
 
 src/core/CMakeFiles/core.dir/Decision.cpp.o.requires:
 .PHONY : src/core/CMakeFiles/core.dir/Decision.cpp.o.requires
@@ -183,8 +180,8 @@ src/core/libcore.a: src/core/CMakeFiles/core.dir/Decision.cpp.o
 src/core/libcore.a: src/core/CMakeFiles/core.dir/build.make
 src/core/libcore.a: src/core/CMakeFiles/core.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libcore.a"
-	cd /home/hous/workspace/openADP/src/core && $(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
-	cd /home/hous/workspace/openADP/src/core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/reza/workspace/openADP/src/core && $(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
+	cd /home/reza/workspace/openADP/src/core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/core/CMakeFiles/core.dir/build: src/core/libcore.a
@@ -198,10 +195,10 @@ src/core/CMakeFiles/core.dir/requires: src/core/CMakeFiles/core.dir/Decision.cpp
 .PHONY : src/core/CMakeFiles/core.dir/requires
 
 src/core/CMakeFiles/core.dir/clean:
-	cd /home/hous/workspace/openADP/src/core && $(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean.cmake
+	cd /home/reza/workspace/openADP/src/core && $(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean.cmake
 .PHONY : src/core/CMakeFiles/core.dir/clean
 
 src/core/CMakeFiles/core.dir/depend:
-	cd /home/hous/workspace/openADP && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hous/workspace/openADP /home/hous/workspace/openADP/src/core /home/hous/workspace/openADP /home/hous/workspace/openADP/src/core /home/hous/workspace/openADP/src/core/CMakeFiles/core.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/reza/workspace/openADP && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/reza/workspace/openADP /home/reza/workspace/openADP/src/core /home/reza/workspace/openADP /home/reza/workspace/openADP/src/core /home/reza/workspace/openADP/src/core/CMakeFiles/core.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/core/CMakeFiles/core.dir/depend
 

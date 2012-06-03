@@ -1,2 +1,2 @@
-/usr/bin/ar.exe cr libexception.a  CMakeFiles/exception.dir/MyException.cpp.o
-/usr/bin/ranlib.exe libexception.a
+/usr/bin/ar cr libexception.a  CMakeFiles/exception.dir/MyException.cpp.o
+/usr/bin/ranlib libexception.a
