@@ -15,8 +15,8 @@ int main(int argc, char *argv[]) {
 	SimpleParameter params;
 	params.general.iterate = 200;
 	
-	vector<vector<Resource> > resources(4);
-	vector<matrix<Decision> > decisions(4);
+	vector<vector<Resource> > resources(3);
+	vector<matrix<Decision> > decisions(3);
 	
 	Solver<PLValueFunction, STCStepsize> sol(resources, decisions, params);
 

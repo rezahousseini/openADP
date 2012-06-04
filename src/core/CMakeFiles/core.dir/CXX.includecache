@@ -41,7 +41,7 @@ src/parameter/Parameter.h
 src/parameter/Parameter.h
 
 src/valuefunction/PLValueFunction.h
-boost/numeric/ublas/matrix.hpp
+vector
 -
 ValueFunction.h
 src/valuefunction/ValueFunction.h

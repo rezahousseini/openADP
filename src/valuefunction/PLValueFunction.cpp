@@ -7,16 +7,9 @@
 
 #include "PLValueFunction.h"
 
-PLValueFunction::PLValueFunction() : weights() {
-}
-
-PLValueFunction::PLValueFunction(const GeneralParameter& _params) : weights(_params.scale), params(_params) {
+PLValueFunction::PLValueFunction(int scale) : weights(scale) {
 }
 
 void PLValueFunction::update() {
 
-}
-
-PLValueFunction::~PLValueFunction() {
-	// TODO Auto-generated destructor stub
 }

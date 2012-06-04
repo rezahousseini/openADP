@@ -15,8 +15,6 @@ State<T>::State(
 	vector<Resource>& _resources,
 	matrix<Decision>& _decisions,
 	const GeneralParameter& params
-) : resources(_resources), decisions(_decisions), valfuncs(_resources.size(), T(params)) {
-
-}
+) : resources(_resources), decisions(_decisions), valfuncs(_resources.size(), T(params.scale)) {}
 
 template class State<PLValueFunction>;

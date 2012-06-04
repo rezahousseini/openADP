@@ -18,9 +18,8 @@ Solver<T1, T2>::Solver(
 	const SimpleParameter& _params
 ) : states(resources.size()), stepsize(_params.stepsize), params(_params.general) {
 	// Instantiate the states
-	for (int i=0; i<resources.size(); i++) {
-		states(i) = State<T1>(resources(i), decisions(i), params);
-	}
+	for (int i=0; i<resources.size(); i++)
+		states[i] = State<T1>(resources(i), decisions(i), params);
 }
 
 template<typename T1, typename T2>
@@ -29,8 +28,10 @@ const int Solver<T1, T2>::solve(void) {
 	for (int i=0; i<params.iterate; i++) {
 		// Do for every time step
 		for (int t=0; t<states.size(); t++) {
-			
+			states = makeDecision(states);
 		}
+		
+		stepsize.update();
 	}
 	
 	return 0;
