@@ -19,8 +19,15 @@ src/core/CMakeFiles/core.dir/State.cpp.o: src/core/Decision.h
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/Resource.h
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/State.cpp
 src/core/CMakeFiles/core.dir/State.cpp.o: src/core/State.h
+src/core/CMakeFiles/core.dir/State.cpp.o: src/core/Status.h
+src/core/CMakeFiles/core.dir/State.cpp.o: src/optimizer/Optimizer.h
+src/core/CMakeFiles/core.dir/State.cpp.o: src/optimizer/PLOptimizer.h
 src/core/CMakeFiles/core.dir/State.cpp.o: src/parameter/GeneralParameter.h
 src/core/CMakeFiles/core.dir/State.cpp.o: src/parameter/Parameter.h
+src/core/CMakeFiles/core.dir/State.cpp.o: src/stepsize/Stepsize.h
 src/core/CMakeFiles/core.dir/State.cpp.o: src/valuefunction/PLValueFunction.h
 src/core/CMakeFiles/core.dir/State.cpp.o: src/valuefunction/ValueFunction.h
+
+src/core/CMakeFiles/core.dir/Status.cpp.o: src/core/Status.cpp
+src/core/CMakeFiles/core.dir/Status.cpp.o: src/core/Status.h
 

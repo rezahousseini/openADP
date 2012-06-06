@@ -164,13 +164,37 @@ src/core/CMakeFiles/core.dir/Decision.cpp.o.provides: src/core/CMakeFiles/core.d
 
 src/core/CMakeFiles/core.dir/Decision.cpp.o.provides.build: src/core/CMakeFiles/core.dir/Decision.cpp.o
 
+src/core/CMakeFiles/core.dir/Status.cpp.o: src/core/CMakeFiles/core.dir/flags.make
+src/core/CMakeFiles/core.dir/Status.cpp.o: src/core/Status.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hous/workspace/openADP/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/core/CMakeFiles/core.dir/Status.cpp.o"
+	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Status.cpp.o -c /home/hous/workspace/openADP/src/core/Status.cpp
+
+src/core/CMakeFiles/core.dir/Status.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Status.cpp.i"
+	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hous/workspace/openADP/src/core/Status.cpp > CMakeFiles/core.dir/Status.cpp.i
+
+src/core/CMakeFiles/core.dir/Status.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Status.cpp.s"
+	cd /home/hous/workspace/openADP/src/core && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hous/workspace/openADP/src/core/Status.cpp -o CMakeFiles/core.dir/Status.cpp.s
+
+src/core/CMakeFiles/core.dir/Status.cpp.o.requires:
+.PHONY : src/core/CMakeFiles/core.dir/Status.cpp.o.requires
+
+src/core/CMakeFiles/core.dir/Status.cpp.o.provides: src/core/CMakeFiles/core.dir/Status.cpp.o.requires
+	$(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Status.cpp.o.provides.build
+.PHONY : src/core/CMakeFiles/core.dir/Status.cpp.o.provides
+
+src/core/CMakeFiles/core.dir/Status.cpp.o.provides.build: src/core/CMakeFiles/core.dir/Status.cpp.o
+
 # Object files for target core
 core_OBJECTS = \
 "CMakeFiles/core.dir/Connection.cpp.o" \
 "CMakeFiles/core.dir/Model.cpp.o" \
 "CMakeFiles/core.dir/Resource.cpp.o" \
 "CMakeFiles/core.dir/State.cpp.o" \
-"CMakeFiles/core.dir/Decision.cpp.o"
+"CMakeFiles/core.dir/Decision.cpp.o" \
+"CMakeFiles/core.dir/Status.cpp.o"
 
 # External object files for target core
 core_EXTERNAL_OBJECTS =
@@ -180,6 +204,7 @@ src/core/libcore.a: src/core/CMakeFiles/core.dir/Model.cpp.o
 src/core/libcore.a: src/core/CMakeFiles/core.dir/Resource.cpp.o
 src/core/libcore.a: src/core/CMakeFiles/core.dir/State.cpp.o
 src/core/libcore.a: src/core/CMakeFiles/core.dir/Decision.cpp.o
+src/core/libcore.a: src/core/CMakeFiles/core.dir/Status.cpp.o
 src/core/libcore.a: src/core/CMakeFiles/core.dir/build.make
 src/core/libcore.a: src/core/CMakeFiles/core.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libcore.a"
@@ -195,6 +220,7 @@ src/core/CMakeFiles/core.dir/requires: src/core/CMakeFiles/core.dir/Model.cpp.o.
 src/core/CMakeFiles/core.dir/requires: src/core/CMakeFiles/core.dir/Resource.cpp.o.requires
 src/core/CMakeFiles/core.dir/requires: src/core/CMakeFiles/core.dir/State.cpp.o.requires
 src/core/CMakeFiles/core.dir/requires: src/core/CMakeFiles/core.dir/Decision.cpp.o.requires
+src/core/CMakeFiles/core.dir/requires: src/core/CMakeFiles/core.dir/Status.cpp.o.requires
 .PHONY : src/core/CMakeFiles/core.dir/requires
 
 src/core/CMakeFiles/core.dir/clean:

@@ -5,50 +5,46 @@
  *      Author: reza
  */
 
+#include <exception>
 #include "Solver.h"
 #include "PLValueFunction.h"
+#include "PLOptimizer.h"
 #include "STCStepsize.h"
 
 using namespace boost::numeric::ublas;
 
-template<typename T1, typename T2>
-Solver<T1, T2>::Solver(
-	vector<vector<Resource> >& resources,
-	vector<matrix<Decision> >& decisions,
-	const SimpleParameter& _params
-) : states(resources.size()), stepsize(_params.stepsize), params(_params.general) {
-	// Instantiate the states
-	for (int i=0; i<resources.size(); i++)
-		states[i] = State<T1>(resources(i), decisions(i), params);
+template<typename T1, typename T2, typename T3>
+Solver<T1, T2, T3>::Solver(vector<vector<Resource> >& resources_data,
+                           vector<matrix<Decision> >& decisions_data,
+                           const SimpleParameter& _params) 
+    : states(),
+      stepsize(_params.stepsize), 
+      params(_params.general), 
+      status() {
+  states.reserve(resources_data.size());
+	for (int i=0; i<resources_data.size(); i++) {
+		states[i] = State<T1, T2>(resources_data(i), decisions_data(i), params);
+  }
 }
 
-template<typename T1, typename T2>
-const int Solver<T1, T2>::solve(void) {
-	// Iterate trough sample space
+template<typename T1, typename T2, typename T3>
+const int Solver<T1, T2, T3>::solve(void) {
 	for (int i=0; i<params.iterate; i++) {
-		// Do for every time step
-		for (int t=0; t<states.size(); t++) {
-			states = makeDecision(states);
-		}
-		
+		optimizeStates();
 		stepsize.update();
+		if (params.printStatus) status.print();
 	}
-	
 	return 0;
 }
 
-// const GeneralParameter& Solver<T>::getParams() const {return params;}
-
-// const int Solver::getStatus() {
-
-	// if (status) {
-		// return status->init(this, this->iter);
-	// }
-	// else {
-		// return status->current(this->iter);
-	// }
-
-// }
+template<typename T1, typename T2, typename T3>
+void Solver<T1, T2, T3>::optimizeStates(void) {
+	for (int t=0; t<states.size()-1; t++) {
+		states[t].findOptimalDecision(status);
+		states[t].calculateNextState(states[t+1]);
+		states[t].updateValueFunction(states[t+1], stepsize);
+	}
+}
 
 // Explicit class declaration
-template class Solver<PLValueFunction, STCStepsize>;
+template class Solver<PLValueFunction, PLOptimizer, STCStepsize>;

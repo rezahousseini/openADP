@@ -10,7 +10,7 @@ include_directories(
 "${PROJECT_SOURCE_DIR}/src/interface"
 "${PROJECT_SOURCE_DIR}/src/interface/octave"
 "${PROJECT_SOURCE_DIR}/src/core"
-# "${PROJECT_SOURCE_DIR}/src/optimizer"
+"${PROJECT_SOURCE_DIR}/src/optimizer"
 "${PROJECT_SOURCE_DIR}/src/parameter"
 # "${PROJECT_SOURCE_DIR}/src/simulator"
 "${PROJECT_SOURCE_DIR}/src/solver"
@@ -24,7 +24,7 @@ add_subdirectory(src)
 
 add_executable(openadp openadp.cpp)
 target_link_libraries(openadp
-	# optimizer 
+	optimizer
 	parameter 
 	# simulator 
 	solver 

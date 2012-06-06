@@ -1,6 +1,4 @@
 add_library(abstract 
-	Data.cpp 
-	Optimizer.cpp 
-	Simulator.cpp 
-	Status.cpp 
+	Data.cpp
+	Simulator.cpp
 )

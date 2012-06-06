@@ -15,7 +15,7 @@
 class SimpleParameter : public Parameter {
 public:
 	SimpleParameter();
-	virtual ~SimpleParameter();
+	~SimpleParameter();
 	GeneralParameter general;
 	StepsizeParameter stepsize;
 };

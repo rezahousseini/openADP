@@ -13,6 +13,7 @@ SET(CMAKE_C_INCLUDE_PATH
   "src/interface"
   "src/interface/octave"
   "src/core"
+  "src/optimizer"
   "src/parameter"
   "src/solver"
   "src/stepsize"

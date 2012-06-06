@@ -15,12 +15,12 @@
 #include "GeneralParameter.h"
 
 class PLValueFunction : ValueFunction {
-public:
+ public:
 	// PLValueFunction();
 	PLValueFunction(int scale = 10);
 	~PLValueFunction() {};
 	void update();
-private:
+ private:
 	std::vector<float> weights;
 	// const GeneralParameter& params;
 };

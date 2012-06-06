@@ -17,6 +17,8 @@ State.h
 /home/hous/workspace/openADP/src/core/State.h
 PLValueFunction.h
 /home/hous/workspace/openADP/src/core/PLValueFunction.h
+PLOptimizer.h
+/home/hous/workspace/openADP/src/core/PLOptimizer.h
 
 /home/hous/workspace/openADP/src/core/State.h
 vector
@@ -33,12 +35,42 @@ Decision.h
 /home/hous/workspace/openADP/src/core/Decision.h
 GeneralParameter.h
 /home/hous/workspace/openADP/src/core/GeneralParameter.h
+Status.h
+/home/hous/workspace/openADP/src/core/Status.h
+Stepsize.h
+/home/hous/workspace/openADP/src/core/Stepsize.h
+
+/home/hous/workspace/openADP/src/core/Status.h
+
+src/optimizer/Optimizer.h
+boost/numeric/ublas/vector.hpp
+-
+boost/numeric/ublas/matrix.hpp
+-
+ValueFunction.h
+src/optimizer/ValueFunction.h
+Resource.h
+src/optimizer/Resource.h
+Decision.h
+src/optimizer/Decision.h
+
+src/optimizer/PLOptimizer.h
+boost/numeric/ublas/matrix.hpp
+-
+boost/numeric/ublas/vector.hpp
+-
+Optimizer.h
+src/optimizer/Optimizer.h
 
 src/parameter/GeneralParameter.h
 Parameter.h
 src/parameter/Parameter.h
 
 src/parameter/Parameter.h
+
+src/stepsize/Stepsize.h
+Parameter.h
+src/stepsize/Parameter.h
 
 src/valuefunction/PLValueFunction.h
 vector
