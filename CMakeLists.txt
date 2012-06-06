@@ -34,4 +34,5 @@ target_link_libraries(openadp
 	octave 
 	# abstract 
 	exception
+  glpk
 )

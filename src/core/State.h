@@ -26,11 +26,11 @@ class State {
         boost::numeric::ublas::matrix<Decision>& decisions_data,
         const GeneralParameter& params);
 	void findOptimalDecision(Status& status);
-	void findOptimalDecision(void);
-	void calculateNextState(const State& future);
-	void updateValueFunction(const State& future, const Stepsize& stepsize);
+	void calculateNextState(const State& futureState);
+	void updateValueFunction(const State& futureState, const Stepsize& stepsize);
 	~State() {};
  private:
+  void findOptimalDecision(void);
 	boost::numeric::ublas::vector<Resource> resources;
 	boost::numeric::ublas::matrix<Decision> decisions;
 	std::vector<T1> valfuncs;

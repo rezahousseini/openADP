@@ -10,9 +10,9 @@
 
 #include <boost/numeric/ublas/vector.hpp>
 #include <boost/numeric/ublas/matrix.hpp>
-#include "ValueFunction.h"
 #include "Resource.h"
 #include "Decision.h"
+// #include "ValueFunction.h"
 
 class Optimizer {
  public:

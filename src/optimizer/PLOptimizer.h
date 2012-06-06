@@ -12,15 +12,14 @@
 #include <boost/numeric/ublas/vector.hpp>
 #include "Optimizer.h"
 
-using namespace boost::numeric::ublas;
-
 class PLOptimizer : public Optimizer {
  public:
 	PLOptimizer(boost::numeric::ublas::vector<Resource>& resources_data,
-              boost::numeric::ublas::matrix<Decision>& decisions_data);
+              boost::numeric::ublas::matrix<Decision>& decisions_data,
+              int scale);
 	~PLOptimizer() {};
-	// void run();
-	void update();
+	void run(const boost::numeric::ublas::matrix<Decision>& decisions);
+	void update(void);
 };
 
 #endif /* PLOPTIMIZER_H_ */
