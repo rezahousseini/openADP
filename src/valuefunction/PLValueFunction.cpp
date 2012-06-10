@@ -7,17 +7,9 @@
 
 #include "PLValueFunction.h"
 
-PLValueFunction::PLValueFunction() {
+PLValueFunction::PLValueFunction(int scale) : weights(scale) {
 }
-
-// PLValueFunction::PLValueFunction(int numbers) {
-	// //weights = vector<ListDigraph::Arc> (numbers);
-// }
 
 void PLValueFunction::update() {
 
-}
-
-PLValueFunction::~PLValueFunction() {
-	// TODO Auto-generated destructor stub
 }

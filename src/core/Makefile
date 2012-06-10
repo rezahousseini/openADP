@@ -229,6 +229,30 @@ State.cpp.s:
 	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/State.cpp.s
 .PHONY : State.cpp.s
 
+Status.o: Status.cpp.o
+.PHONY : Status.o
+
+# target to build an object file
+Status.cpp.o:
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Status.cpp.o
+.PHONY : Status.cpp.o
+
+Status.i: Status.cpp.i
+.PHONY : Status.i
+
+# target to preprocess a source file
+Status.cpp.i:
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Status.cpp.i
+.PHONY : Status.cpp.i
+
+Status.s: Status.cpp.s
+.PHONY : Status.s
+
+# target to generate assembly for a file
+Status.cpp.s:
+	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Status.cpp.s
+.PHONY : Status.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -253,6 +277,9 @@ help:
 	@echo "... State.o"
 	@echo "... State.i"
 	@echo "... State.s"
+	@echo "... Status.o"
+	@echo "... Status.i"
+	@echo "... Status.s"
 .PHONY : help
 
 

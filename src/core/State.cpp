@@ -6,19 +6,40 @@
  */
 
 #include "State.h"
+#include "PLValueFunction.h"
+#include "PLOptimizer.h"
 
 using namespace boost::numeric::ublas;
 
-State::State() {
+template<typename T1, typename T2>
+State<T1, T2>::State(vector<Resource>& resources_data, 
+                     matrix<Decision>& decisions_data,
+                     const GeneralParameter& params)
+    : resources(resources_data.size()),
+      decisions(decisions_data.size1(), decisions_data.size2()),
+      valfuncs(resources_data.size(), T1(params.scale)),
+      optimizer(resources_data, decisions_data, params.scale) {}
+
+template<typename T1, typename T2>
+void State<T1, T2>::findOptimalDecision(Status& status) {
+	findOptimalDecision();
+	status.update();
 }
 
-State::State(
-	vector<Resource>& _resources, 
-	vector<ValueFunction>& _valfuncs,
-	matrix<Decision>& _decisions
-) : resources(_resources), valfuncs(_valfuncs), decisions(_decisions) {
+template<typename T1, typename T2>
+void State<T1, T2>::findOptimalDecision(void) {
+	optimizer.run(decisions);
 }
 
-State::~State() {
-	// TODO Auto-generated destructor stub
+template<typename T1, typename T2>
+void State<T1, T2>::calculateNextState(const State& futureState) {
+	
 }
+
+template<typename T1, typename T2>
+void State<T1, T2>::updateValueFunction(const State& futureState,
+                                        const Stepsize& stepsize) {
+  optimizer.update();
+}
+
+template class State<PLValueFunction, PLOptimizer>;

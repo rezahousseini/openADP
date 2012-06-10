@@ -1,1 +1,4 @@
-add_library(valuefunction PLValueFunction.cpp)
+add_library(valuefunction 
+	ValueFunction.cpp
+	PLValueFunction.cpp
+)

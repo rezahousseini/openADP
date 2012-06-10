@@ -1,1 +1,4 @@
-add_library(solver LinearSolver.cpp)
+add_library(solver 
+	Solver.cpp
+	# LinearSolver.cpp
+)

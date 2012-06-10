@@ -1,1 +1,6 @@
-add_library(parameter SimpleParameter.cpp GeneralParameter.cpp StepsizeParameter.cpp)
+add_library(parameter 
+	Parameter.cpp
+	SimpleParameter.cpp 
+	GeneralParameter.cpp 
+	StepsizeParameter.cpp
+)

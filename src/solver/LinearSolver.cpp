@@ -30,7 +30,7 @@ const SimpleParameter &_params) : params(_params.general) {
 	
 	for (int i=0; i<resources.size(); i++) {
 		vector<ValueFunction> valfuncs(resources(i).size());
-		states(i) = State(resources(i), valfuncs, decisions(i));
+		// states(i) = State(resources(i), valfuncs, decisions(i));
 	}
 }
 
@@ -38,9 +38,9 @@ const int LinearSolver::solve(void) {
 	// Iterate trough sample space
 	
 	for (int i=0; i<params.iterate; i++) {
-		for (int t=0; t<states.size(); t++) {
+		// for (int t=0; t<states.size(); t++) {
 			
-		} 
+		// } 
 	}
 	
 	return 0;

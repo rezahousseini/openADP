@@ -7,6 +7,7 @@
 #include "Decision.h"
 #include "SimpleParameter.h"
 #include "PLValueFunction.h"
+#include "PLOptimizer.h"
 #include "STCStepsize.h"
 
 using namespace boost::numeric::ublas;
@@ -15,10 +16,11 @@ int main(int argc, char *argv[]) {
 	SimpleParameter params;
 	params.general.iterate = 200;
 	
-	vector<vector<Resource> > resources(4);
-	vector<matrix<Decision> > decisions(4);
+	vector<vector<Resource> > resources(3);
+	vector<matrix<Decision> > decisions(3);
 	
-	Solver<PLValueFunction, STCStepsize> sol(resources, decisions, params);
+	Solver<PLValueFunction, PLOptimizer, STCStepsize> sol(resources, decisions, 
+                                                        params);
 
 	// vector<vector<std::string> > resourceAttributes;
 	// vector<vector<std::string> > decisionAttributes;
@@ -50,8 +52,6 @@ int main(int argc, char *argv[]) {
 	//connections(3, 1) = Connection(0, 0);
 	//connections(3, 2) = Connection(10, 1);
 	//connections(3, 3) = Connection(0, 0);
-
-	// LinearSolver solver = LinearSolver(resources, decisions, params);
 	
 	return 0;
 }
