@@ -12,15 +12,15 @@ src/core/CMakeFiles/core.dir/Model.cpp.o
  /home/reza/workspace/openADP/src/core/Model.cpp
  /home/reza/workspace/openADP/src/core/Model.h
  /home/reza/workspace/openADP/src/core/Resource.h
- src/abstract/Data.h
 src/core/CMakeFiles/core.dir/Resource.cpp.o
  /home/reza/workspace/openADP/src/core/Resource.cpp
  /home/reza/workspace/openADP/src/core/Resource.h
- src/abstract/Data.h
 src/core/CMakeFiles/core.dir/State.cpp.o
  /home/reza/workspace/openADP/src/core/Decision.h
  /home/reza/workspace/openADP/src/core/Resource.h
  /home/reza/workspace/openADP/src/core/State.cpp
  /home/reza/workspace/openADP/src/core/State.h
- src/abstract/Data.h
- src/abstract/ValueFunction.h
+ src/valuefunction/ValueFunction.h
+src/core/CMakeFiles/core.dir/Status.cpp.o
+ /home/reza/workspace/openADP/src/core/Status.cpp
+ /home/reza/workspace/openADP/src/core/Status.h

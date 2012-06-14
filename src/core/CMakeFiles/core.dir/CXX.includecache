@@ -58,7 +58,13 @@ ValueFunction.h
 Decision.h
 /home/reza/workspace/openADP/src/core/Decision.h
 
-src/abstract/Data.h
+/home/reza/workspace/openADP/src/core/Status.cpp
+iostream
+-
+Status.h
+/home/reza/workspace/openADP/src/core/Status.h
 
-src/abstract/ValueFunction.h
+/home/reza/workspace/openADP/src/core/Status.h
+
+src/valuefunction/ValueFunction.h
 

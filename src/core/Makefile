@@ -234,7 +234,7 @@ Status.o: Status.cpp.o
 
 # target to build an object file
 Status.cpp.o:
-	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Status.cpp.o
+	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Status.cpp.o
 .PHONY : Status.cpp.o
 
 Status.i: Status.cpp.i
@@ -242,7 +242,7 @@ Status.i: Status.cpp.i
 
 # target to preprocess a source file
 Status.cpp.i:
-	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Status.cpp.i
+	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Status.cpp.i
 .PHONY : Status.cpp.i
 
 Status.s: Status.cpp.s
@@ -250,7 +250,7 @@ Status.s: Status.cpp.s
 
 # target to generate assembly for a file
 Status.cpp.s:
-	cd /home/hous/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Status.cpp.s
+	cd /home/reza/workspace/openADP && $(MAKE) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/Status.cpp.s
 .PHONY : Status.cpp.s
 
 # Help Target
